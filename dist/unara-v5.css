@@ -16,3 +16,10 @@
 @media(max-width:420px){.people-list .people-logo{width:102px;height:auto}}
 
 .route-optional-note{font-size:13px;color:var(--muted);margin-top:15px;margin-bottom:0}
+
+/* Center each horizontal stage's labels on its circular icon. */
+@media(min-width:1001px){
+  .route .route-stop{align-items:center;text-align:center}
+  .route-number{width:100%}
+  .route:before{left:7%;right:7%}
+}
