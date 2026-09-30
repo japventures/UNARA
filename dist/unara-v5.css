@@ -2,7 +2,7 @@
 .hero h1{max-width:1220px}.hero-content>p:not(.eyebrow){max-width:660px;font-size:clamp(18px,1.5vw,23px)}.intro-grid p:not(.eyebrow){max-width:800px}.chapter-note p{max-width:470px}.build-copy>p{font-size:20px;max-width:560px}.build-copy li{padding:14px 0}.portal-heading h2{max-width:750px}.portal-aside blockquote{font-size:clamp(32px,3vw,48px)}.exit-options article p:not(.eyebrow){min-height:0}.people-intro{max-width:590px}.v5-tool{padding:35px 0 55px}.v5-tool>.wrap{display:flex;align-items:center;justify-content:space-between;gap:30px;border-top:1px solid var(--line);padding-top:25px}.v5-tool p{font-size:17px;color:var(--muted);margin:0}.v5-tool .text-link{font-size:16px;margin:0;white-space:nowrap}.deck-links-intro{font-size:18px}.initial-services article p{max-width:260px}
 @media(max-width:760px){.hero-content>p:not(.eyebrow){max-width:520px}.build-copy>p{font-size:18px}.v5-tool>.wrap{align-items:flex-start;flex-direction:column;gap:18px}.portal-aside blockquote{font-size:38px}}
 
-.route{grid-template-columns:repeat(7,minmax(0,1fr));gap:clamp(8px,1.2vw,20px)}.initial-services .initial-step-number{font-size:11px;margin:0 0 20px;letter-spacing:.15em}.initial-services article{scroll-margin-top:30px}
+.route{grid-template-columns:repeat(8,minmax(0,1fr));gap:clamp(8px,1.2vw,20px)}.initial-services .initial-step-number{font-size:11px;margin:0 0 20px;letter-spacing:.15em}.initial-services article{scroll-margin-top:30px}
 @media(max-width:1000px){.route{grid-template-columns:1fr}}
 
 .initial-services img[src="logos/legal-key.png"]{filter:grayscale(1) brightness(0);opacity:.76}.v5-tool{background:var(--acid)}
@@ -21,5 +21,9 @@
 @media(min-width:1001px){
   .route .route-stop{align-items:center;text-align:center}
   .route-number{width:100%}
-  .route:before{left:7%;right:7%}
+  .route:before{left:6.25%;right:6.25%}
 }
+
+/* Keep the exit decision highlighted; management is optional. */
+.route .route-stop:nth-child(7) .route-icon{background:#c6a77e;border-color:#5f6e74}
+.route .route-stop:last-child .route-icon{background:#e4e8e9;border-color:#6f8087}
