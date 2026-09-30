@@ -1,0 +1,18 @@
+/* V5: fewer competing messages, more room for evidence. */
+.hero h1{max-width:1220px}.hero-content>p:not(.eyebrow){max-width:660px;font-size:clamp(18px,1.5vw,23px)}.intro-grid p:not(.eyebrow){max-width:800px}.chapter-note p{max-width:470px}.build-copy>p{font-size:20px;max-width:560px}.build-copy li{padding:14px 0}.portal-heading h2{max-width:750px}.portal-aside blockquote{font-size:clamp(32px,3vw,48px)}.exit-options article p:not(.eyebrow){min-height:0}.people-intro{max-width:590px}.v5-tool{padding:35px 0 55px}.v5-tool>.wrap{display:flex;align-items:center;justify-content:space-between;gap:30px;border-top:1px solid var(--line);padding-top:25px}.v5-tool p{font-size:17px;color:var(--muted);margin:0}.v5-tool .text-link{font-size:16px;margin:0;white-space:nowrap}.deck-links-intro{font-size:18px}.initial-services article p{max-width:260px}
+@media(max-width:760px){.hero-content>p:not(.eyebrow){max-width:520px}.build-copy>p{font-size:18px}.v5-tool>.wrap{align-items:flex-start;flex-direction:column;gap:18px}.portal-aside blockquote{font-size:38px}}
+
+.route{grid-template-columns:repeat(7,minmax(0,1fr));gap:clamp(8px,1.2vw,20px)}.initial-services .initial-step-number{font-size:11px;margin:0 0 20px;letter-spacing:.15em}.initial-services article{scroll-margin-top:30px}
+@media(max-width:1000px){.route{grid-template-columns:1fr}}
+
+.initial-services img[src="logos/legal-key.png"]{filter:grayscale(1) brightness(0);opacity:.76}.v5-tool{background:var(--acid)}
+
+.route-intro{margin-top:75px;margin-bottom:0;font-size:clamp(21px,2vw,28px);font-weight:500;color:var(--ink)}.route-intro+.route{margin-top:35px}
+@media(max-width:760px){.route-intro{margin-top:45px}}
+
+/* Same alpha-weighted visible area for each specialist, with original proportions. */
+.initial-services img{width:225px;height:auto;aspect-ratio:26/11;max-width:100%;object-fit:contain;filter:brightness(0);opacity:.82}.people-list .people-logo{width:170px;height:auto;aspect-ratio:26/11}.people-list .people-logo img{width:100%;height:100%;object-fit:contain;object-position:center}
+@media(max-width:760px){.people-list .people-logo{width:125px;height:auto}}
+@media(max-width:420px){.people-list .people-logo{width:102px;height:auto}}
+
+.route-optional-note{font-size:13px;color:var(--muted);margin-top:15px;margin-bottom:0}
