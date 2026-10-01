@@ -16,7 +16,7 @@ Importes nominales en USD, antes de impuestos sobre ingresos o ganancias. Las ci
 
 Residencial y Upscale: contrato con Northreach en mes 0, terreno en mes 1 y salida prevista en mes 12. Los índices internos 1–12 representan meses 0–11 en las tablas; la salida se muestra aparte en mes 12. Flex conserva su calendario de 18 meses.
 
-Starter conserva: 1,786 ft² habitables, 2,179 ft² construidos, obra a $115/ft² construido, terreno $74,200 y salida ilustrativa a $238/ft² habitable. El crédito inicial se redondea al 60% en la interfaz; la comisión de venta es 6%. Contingencia incluida en el presupuesto de obra, sin cargo doble. Estos valores requieren presupuestos y comparables actuales. El modelo muestra pérdidas si los supuestos no sostienen el proyecto.
+Starter conserva: 1,786 ft² habitables, 2,179 ft² construidos, obra a $125/ft² total construido, terreno desde $70,000 en incrementos de $5,000 y salida ilustrativa a $238/ft² habitable. El crédito inicial se redondea al 60% en la interfaz; la comisión de venta es 6%. Contingencia incluida en el presupuesto de obra, sin cargo doble. Estos valores requieren presupuestos y comparables actuales. El modelo muestra pérdidas si los supuestos no sostienen el proyecto.
 
 ## Conservación para renta
 
