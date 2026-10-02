@@ -24,6 +24,3 @@
   .route:before{left:6.25%;right:6.25%}
 }
 
-/* Keep the exit decision highlighted; management is optional. */
-.route .route-stop:nth-child(7) .route-icon{background:#c6a77e;border-color:#5f6e74}
-.route .route-stop:last-child .route-icon{background:#e4e8e9;border-color:#6f8087}
