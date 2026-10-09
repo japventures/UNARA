@@ -1,5 +1,6 @@
 
 (()=>{
+if(typeof location!=='undefined'&&new URLSearchParams(location.search).get('review')==='mobile'&&window.self===window.top){const frame=document.createElement('iframe');frame.title='Current Opportunities · revisión móvil a 390px';frame.src=location.pathname;frame.style.cssText='display:block;width:min(390px,100%);height:844px;max-height:94dvh;border:1px solid #c6a77e;background:#ece9e1;margin:12px auto';const label=document.createElement('p');label.textContent='UNARA · revisión responsive · 390px';label.style.cssText='text-align:center;color:#102832;margin:12px';document.body.replaceChildren(label,frame);return;}
 const root=document.getElementById('houston-lot-map'),data=window.UNARA_OPPORTUNITIES;
 const colors={shovel:'var(--blue)',lot:'var(--yellow)',both:'var(--purple)',flex:'var(--orange)',land:'#697b86'};
 const categories={land:'Terreno · $80,000 o más',shovel:'Shovel-ready candidate',lot:'Lot under $80,000',both:'Shovel ready + under $80,000',flex:'Flex site candidate · 10,000 SF / $3M budget'};
@@ -25,7 +26,7 @@ function applyFilter(){
  root.querySelector('#hm-filter-count').textContent=visible.length+' fichas · '+visible.filter(p=>'x' in p).length+' ubicadas · '+visible.filter(p=>!('x' in p)).length+' solo en lista';
  chooser.disabled=!visible.length;
  root.querySelector('.hm-nearby').replaceChildren();
- renderCards(visible);if(pins)pins.attr('display',p=>matchesFilters(p)?null:'none');
+ renderCards(visible);if(pins){pins.attr('display',p=>matchesFilters(p)?null:'none');layoutMarkers();}
  if(visible.length){if(!visible.some(p=>p.index===selected))selected=visible[0].index;show(selected);}
  else{selected=-1;const empty=document.createElement('p');empty.className='empty-state';empty.textContent='No hay resultados. Ajusta los filtros o pulsa Limpiar.';root.querySelector('#opportunity-cards').append(empty);detail.textContent='No hay terrenos con estos filtros. Cambia los valores o pulsa Limpiar.';}
 }
@@ -38,7 +39,7 @@ function show(i,focus=false){
  if(p.remarks){const note=document.createElement('p');note.className='text-small';note.textContent='Listing remarks: '+p.remarks;detail.append(note);}
  if(p.category_correction){const correction=document.createElement('p');correction.textContent='Clasificación corregida por precio; categoría original conservada en los datos de fuente.';detail.append(correction);}
  const status=document.createElement('div');status.className='text-small text-muted';status.textContent='x' in p?'Address match: '+p.matched+' · parcel boundary unverified':'Sin coordenadas exactas: esta propiedad permanece solo en lista.';detail.append(status);
- if(pins){pins.filter(d=>d.index===selected).raise();pins.select('.hm-pin').attr('r',d=>d.index===selected?8:6);pins.select('.hm-halo').attr('display',d=>d.index===selected?null:'none');}
+ if(pins){layoutMarkers();pins.filter(d=>d.index===selected).raise();pins.select('.hm-pin').attr('r',d=>d.index===selected?8:6);pins.select('.hm-halo').attr('display',d=>d.index===selected?null:'none');}
  if(focus&&'x' in p){setMobileView('map');const card=root.querySelector('[data-card="'+selected+'"]');if(card)card.scrollIntoView({behavior:'smooth',block:'nearest'});const k=Math.max(view.k,8),[x,y]=projection([p.x,p.y]);svg.transition().duration(300).call(zoom.transform,d3.zoomIdentity.translate(width/2-k*x,height/2-k*y).scale(k));}
 }
 
@@ -59,6 +60,8 @@ function renderFlexBudget(p){
 }
 
 function screenPoint(p){return view.apply(projection([p.x,p.y]));}
+function shortPrice(price){return price>=1000000?'$'+Number((price/1000000).toFixed(2))+'M':'$'+Number((price/1000).toFixed(1))+'k';}
+function layoutMarkers(){if(!pins||!projection)return;const boxes=[];const candidates=mapped.filter(matchesFilters).sort((a,b)=>(b.index===selected)-(a.index===selected));const compact=new Set();for(const p of candidates){const [x,y]=screenPoint(p);if(p.index!==selected&&boxes.some(b=>Math.abs(x-b[0])<70&&Math.abs(y-b[1])<36))compact.add(p.index);else boxes.push([x,y]);}pins.classed('compact',p=>compact.has(p.index));}
 function tileFrame(){const world=2*Math.PI*projection.scale()*view.k;const z=Math.max(0,Math.min(16,Math.floor(Math.log2(world/256))));const n=2**z,size=world/n;const [cx,cy]=view.apply(projection([0,0]));return {z,n,size,left:cx-world/2,top:cy-world/2};}
 function positionTiles(){if(!tiles)return;const f=tileFrame();tiles.selectAll('image').attr('x',d=>f.left+d.x*f.size).attr('y',d=>f.top+d.y*f.size).attr('width',f.size+.5).attr('height',f.size+.5);}
 function updateTiles(){if(!tiles)return;const status=root.querySelector('.hm-tile-status');if(basemap.value==='reference'){tiles.selectAll('*').remove();geography.selectAll('.hm-road').attr('opacity',1);status.textContent='Referencia integrada · vías básicas y límite de Houston. Sin detalle de calles.';return;}
@@ -70,7 +73,7 @@ function updateTiles(){if(!tiles)return;const status=root.querySelector('.hm-til
 function move(){
  geography.attr('transform',view);
  pins.attr('transform',d=>{const [x,y]=screenPoint(d);return `translate(${x},${y})`;});
- positionTiles();clearTimeout(tileTimer);tileTimer=setTimeout(updateTiles,180);
+ layoutMarkers();positionTiles();clearTimeout(tileTimer);tileTimer=setTimeout(updateTiles,180);
  const [x,y]=view.apply(projection([-95.3698,29.7604]));downtown.attr('x',x).attr('y',y+18);
  root.querySelector('#hm-zoom-level').textContent=view.k.toFixed(1)+'×';
  root.querySelector('#hm-zoom-in').disabled=view.k>=256;
@@ -97,8 +100,8 @@ function draw(){
  geography.selectAll('.hm-city').data(data.city.features).join('path').attr('class','hm-city').attr('d',path).attr('vector-effect','non-scaling-stroke');
  
  downtown=clipped.append('text').attr('text-anchor','middle').attr('pointer-events','none').attr('display','none');
- pins=clipped.append('g').selectAll('g').data(mapped).join('g').attr('display',p=>matchesFilters(p)?null:'none').attr('class','price-marker').attr('data-marker',p=>p.index).attr('role','button').attr('tabindex',0).attr('aria-label',p=>p.address+' · '+moneyValue(p.price)).on('click',(event,p)=>{event.stopPropagation();show(p.index);const card=root.querySelector('[data-card="'+p.index+'"]');if(card)card.scrollIntoView({behavior:'smooth',block:'nearest'})}).on('keydown',(event,p)=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();show(p.index)}});
- pins.append('rect').attr('x',-33).attr('y',-16).attr('width',66).attr('height',32).attr('rx',16);pins.append('text').attr('text-anchor','middle').attr('dy','.35em').text(p=>'$'+Math.round(p.price/1000)+'k');pins.append('circle').attr('r',12).attr('class','hm-halo').attr('display','none');
+ pins=clipped.append('g').selectAll('g').data(mapped).join('g').attr('display',p=>matchesFilters(p)?null:'none').attr('class','price-marker').attr('data-marker',p=>p.index).attr('role','button').attr('tabindex',0).attr('aria-label',p=>p.address+' · '+moneyValue(p.price)).on('click',(event,p)=>{event.stopPropagation();show(p.index);const card=root.querySelector('[data-card="'+p.index+'"]');if(card)card.scrollIntoView({behavior:'smooth',block:'nearest'})}).on('mouseenter',function(){d3.select(this).raise()}).on('keydown',(event,p)=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();show(p.index)}});
+ pins.append('circle').attr('class','hm-point').attr('r',4);pins.append('rect').attr('x',-33).attr('y',-16).attr('width',66).attr('height',32).attr('rx',16);pins.append('text').attr('text-anchor','middle').attr('dy','.35em').text(p=>shortPrice(p.price));pins.append('circle').attr('r',12).attr('class','hm-halo').attr('display','none');
  zoom=d3.zoom().extent([[0,0],[width,height]]).scaleExtent([1,256]).on('zoom',event=>{view=event.transform;move()});
  svg.call(zoom).on('click.listing',pick);
  if(center&&view.k>1){const [x,y]=projection(center);view=d3.zoomIdentity.translate(width/2-view.k*x,height/2-view.k*y).scale(view.k);}
