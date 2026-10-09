@@ -1,0 +1,119 @@
+{
+  "source": "https://houston-development-map.z2tk67d7tw.chatgpt.site/",
+  "date": "2026-10-08",
+  "input": 65,
+  "grouped_cards": 63,
+  "mapped": 58,
+  "unmapped": [
+    "0 Donna St",
+    "0 Utah St",
+    "0 Abernathy St",
+    "0 Morrow St",
+    "00 Mansfield"
+  ],
+  "groups_needing_review": [
+    {
+      "address": "7050 Inwood Park Dr",
+      "reason": "Same normalized address and ZIP; different MLS/parcel identifiers retained for realtor review.",
+      "records": [
+        {
+          "address": "7050 Inwood Park Dr",
+          "zip": "77088",
+          "price": 33000,
+          "mls": "37338982",
+          "url": "https://www.har.com/homedetail/7050-inwood-park-dr-houston-tx-77088/13988631",
+          "category": "lot",
+          "remarks": "This is lot is inside of a subdivision of townhomes, ready to be built, if you are looking for a great investment in a stablished neighbor look no further. There are two adjacent lots that the seller is trying to sell together or separately. Once you are inside the subdivision take the first left, and then turn left again the lots are behind the newest townhome.",
+          "ref": "turn211view0",
+          "x": -95.45336683069,
+          "y": 29.863590882096,
+          "matched": "7050 Inwood Park Dr, Houston, Texas, 77088",
+          "location_status": "Address geocoded; parcel boundary unverified",
+          "checked_at": "2026-10-08",
+          "status": "Active on public HAR detail page",
+          "feasibility": "Listing candidate; buildability and replat capacity require independent verification."
+        },
+        {
+          "address": "7050 Inwood Park Dr Dr",
+          "zip": "77088",
+          "price": 35000,
+          "mls": "97240047",
+          "url": "https://www.har.com/homedetail/7050-inwood-park-dr-houston-tx-77088/13988631?lid=10718879",
+          "category": "lot",
+          "remarks": "This lot is inside of a subdivision of townhomes, ready to be built, if you are looking for a great investment in a stablished neighbor look no further. There are two adjacent lots that the seller is trying to sell together or separately. Once you are inside of the subdivision take the first left and then turn left again, the lots are behind the newest townhome.",
+          "ref": "turn210view0",
+          "x": -95.45336683069,
+          "y": 29.863590882096,
+          "matched": "7050 Inwood Park Dr, Houston, Texas, 77088",
+          "location_status": "Address geocoded; parcel boundary unverified",
+          "checked_at": "2026-10-08",
+          "status": "Active on public HAR detail page",
+          "feasibility": "Listing candidate; buildability and replat capacity require independent verification."
+        }
+      ]
+    },
+    {
+      "address": "10131 Dobie St",
+      "reason": "Same normalized address and ZIP; different MLS/parcel identifiers retained for realtor review.",
+      "records": [
+        {
+          "address": "10131 Dobie St",
+          "zip": "77033",
+          "mls": "2489904",
+          "price": 50000,
+          "url": "https://www.har.com/homedetail/10131-dobie-st-houston-tx-77033/16865121",
+          "category": "both",
+          "x": -95.351369797881,
+          "y": 29.649462341168,
+          "score": 100,
+          "matched": "10131 Dobie St, Houston, Texas, 77033",
+          "location_status": "Address geocode; parcel unverified"
+        },
+        {
+          "address": "10131 Dobie St",
+          "zip": "77033",
+          "price": 50000,
+          "mls": "45649303",
+          "url": "https://www.har.com/homedetail/10131-dobie-st-houston-tx-77033/16865119",
+          "category": "both",
+          "remarks": "ALL PERMITS AND PLANS APPROVED. Ready to Build Lots, Plans and permits approved - Dont miss the unique opportunity to acquire ready-to-build lots in one of the fastest-growing neighborhoods, Sunnyside Area. Perfect for single-family homes, these lots offer an exceptional investment opportunity in a desirable location. convenient access to major freeways and the renowned Texas Medical Center. Dobie st lots 1 and 2 and 3 present a promising investment, can be sold as a package deal.\nDon't miss the chance to explore the potential of this prime real estate. Go visit the neighborhood",
+          "ref": "turn226view0",
+          "x": -95.351369797881,
+          "y": 29.649462341168,
+          "matched": "10131 Dobie St, Houston, Texas, 77033",
+          "location_status": "Address geocoded; parcel boundary unverified",
+          "checked_at": "2026-10-08",
+          "status": "Active on public HAR detail page",
+          "feasibility": "Listing candidate; buildability and replat capacity require independent verification."
+        }
+      ]
+    }
+  ],
+  "corrections": [
+    {
+      "address": "304 W Hamilton St",
+      "price": 85000,
+      "original_category": "lot",
+      "category": "land",
+      "reason": "Visible asking price is not strictly below $80,000. Original source category retained in source_records."
+    }
+  ],
+  "map_delivery": {
+    "primary": "USGS Topo public tiled service; viewport-only requests; no keys or payment",
+    "url": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer",
+    "fallback": "Embedded original vector roads and Houston city boundary; automatically visible on tile failure; user-selectable",
+    "tested_endpoint": "https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/tile/11/846/481",
+    "tested_http_status": 200,
+    "osm_external_tiles": "Not used: response had x-blocked header and denial image",
+    "detail_limit": "Topographic reference; not satellite, parcel survey or cadastral boundary"
+  },
+  "v3_checks": [
+    "63 cards / 58 map locations / 5 list-only",
+    "65 original records unchanged from V2",
+    "Hamilton 85000 excluded from under-80000 filter",
+    "Search, price interval, category, coordinates and sorting",
+    "Map/card selection and mobile map/list toggles",
+    "USGS success and failure fallback exercised",
+    "Standalone V3 exact embedded scripts parsed and executed"
+  ]
+}
