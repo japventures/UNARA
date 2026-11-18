@@ -1,0 +1,1863 @@
+<!doctype html><html lang="es"><head><meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; form-action 'none'"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>UNARA · Portal · Demo de revisión</title><style>:root{--navy:#183349;--blue:#1476c5;--ink:#263746;--muted:#75828d;--line:#e6ebef;--bg:#f4f6f8;--sidebar:224px}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:13px/1.5 -apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;-webkit-font-smoothing:antialiased}button,input,select{font:inherit}button{cursor:pointer}svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none;vertical-align:middle}.symbols{position:absolute;width:0;height:0;overflow:hidden}.app-header{height:60px;background:var(--navy);color:white;display:flex;align-items:center;justify-content:space-between;padding:0 25px;position:fixed;inset:0 0 auto;z-index:30;box-shadow:0 1px 5px #14263518}.brand{display:flex;gap:11px;align-items:center;font-size:19px;font-weight:650;letter-spacing:2px}.brand-mark{border:1px solid #ffffff7d;border-radius:5px;display:grid;place-items:center;width:27px;height:30px;font-size:19px;letter-spacing:0;font-weight:500}.brand small{font-size:12px;color:#bfccd5;font-weight:400;letter-spacing:0}.header-divider{width:1px;height:22px;background:#ffffff25;margin:0 10px}.header-right{display:flex;align-items:center;gap:10px;font-size:12px}.preview-pill{border:1px solid #8ba5b65e;background:#ffffff0b;border-radius:4px;padding:3px 8px;font-size:11px;color:#d6e0e8}.avatar{width:30px;height:30px;background:#49677e;border-radius:50%;display:grid;place-items:center;font-size:11px;font-weight:600}.sidebar{position:fixed;top:60px;bottom:0;left:0;width:var(--sidebar);background:white;border-right:1px solid var(--line);padding:26px 14px 18px;display:flex;flex-direction:column;z-index:20}.sidebar-label{font-size:10px;letter-spacing:1.2px;font-weight:700;color:#99a4ad;margin:0 12px 12px}.workspace{display:flex;align-items:center;gap:11px;padding:0 10px 26px}.workspace-icon{width:33px;height:35px;border:1px solid var(--line);border-radius:5px;color:#7991a2;display:grid;place-items:center}.workspace strong{display:block;font-size:12px;font-weight:650}.workspace small{display:block;font-size:11px;color:var(--muted);margin-top:2px}nav{display:grid;gap:5px}nav button{border:0;background:transparent;text-align:left;padding:12px 13px;display:flex;gap:12px;align-items:center;color:#657783;border-radius:5px;font-weight:500}nav button svg{color:#8396a2}nav button:hover{background:#f4f8fb}nav button.active{background:#eaf3fa;color:#1469a9;font-weight:650}nav button.active svg{color:#1476c5}.nav-count{margin-left:auto;font-size:10px;background:#d9eaf7;border-radius:4px;padding:0 6px;color:#2177b3}.sidebar-bottom{margin-top:auto;padding:22px 13px 0;border-top:1px solid var(--line)}.support-icon{display:inline-flex;color:#83a3b8;margin-bottom:10px}.sidebar-bottom strong{font-size:12px;font-weight:600;display:block;color:#536d7d}.sidebar-bottom p{font-size:11px;color:#8495a1;margin:8px 0 19px;line-height:1.7}.sandbox-label{font-size:9px;color:#8b9aa5;white-space:nowrap}main{margin-left:var(--sidebar);padding:88px 32px 0;max-width:1800px}.breadcrumbs{font-size:11px;color:#8b9aa6;display:flex;align-items:center;gap:10px}.breadcrumbs span{color:#b7c1ca}.breadcrumbs strong{color:#667c8b;font-weight:500}.page-heading{display:flex;justify-content:space-between;gap:20px;align-items:center;margin:25px 0 19px}.eyebrow{font-size:10px;letter-spacing:1.1px;font-weight:650;color:#8b9ca8;margin-bottom:5px}h1{font-size:25px;line-height:1.3;letter-spacing:-.6px;margin:0 0 7px;font-weight:650}p{margin:0}.subtitle{color:#8a98a3;font-size:12px}.process-select{display:grid;gap:5px;font-size:10px;color:#8d9aa4;min-width:210px}.process-select select{appearance:auto;max-width:260px;background:white;color:#4b6172;border:1px solid #dce4eb;padding:9px 10px;border-radius:5px;font-size:12px;width:100%;outline:none}.review-note{display:flex;align-items:center;gap:7px;padding:8px 12px;background:#eef5fa;border:1px solid #e2edf5;border-radius:5px;font-size:10px;color:#6b8b9f;margin-bottom:20px}.review-note svg{width:13px;height:13px}.metrics{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:16px;margin-bottom:22px}.metric{display:flex;align-items:center;gap:15px;background:white;border:1px solid var(--line);border-radius:7px;padding:18px;min-height:100px;box-shadow:0 2px 3px #122d3c02}.metric>div:last-child{flex:1;min-width:0}.metric-icon{width:40px;height:40px;border-radius:7px;display:grid;place-items:center}.blue{background:#ebf4fc;color:#2b89ca}.amber{background:#fff6e6;color:#d5a04c}.green{background:#eaf6f1;color:#63a58e}.metric>div>span{font-size:11px;color:#8a99a4}.metric-value{display:flex;align-items:baseline;gap:12px}.metric-value strong{font-size:24px;font-weight:650;letter-spacing:-.7px}.metric small{font-size:10px;color:#8a99a4;display:block}.metric-value small{display:inline}.progress-track{height:4px;background:#edf1f5;border-radius:5px;margin-top:7px}.progress-track div{height:100%;border-radius:5px;background:#438fc9;width:0;transition:width .25s}.metric-stage{font-size:13px;font-weight:600;display:block;margin:5px 0 2px}.content-grid{display:grid;grid-template-columns:minmax(0,1fr) 285px;gap:20px;align-items:start}.panel{background:#fff;border:1px solid var(--line);border-radius:7px;box-shadow:0 2px 4px #17304402}.panel-heading{padding:20px 21px;display:flex;justify-content:space-between;gap:16px;align-items:center;border-bottom:1px solid var(--line)}h2{font-size:14px;font-weight:650;letter-spacing:-.1px;margin:0}.panel-heading p{font-size:11px;color:#8c9ba5;margin-top:4px}.status-pill{display:inline-flex;align-items:center;white-space:nowrap;gap:5px;border-radius:4px;padding:3px 7px;font-size:10px;font-weight:500}.status-pill:before{content:'';width:5px;height:5px;border-radius:50%;background:currentColor}.neutral{background:#f0f3f6;color:#8395a2}.done{background:#eaf7ef;color:#46926a}.working{background:#eaf3fc;color:#3184c6}.toolbar{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:13px 20px;border-bottom:1px solid var(--line)}.segmented{display:flex;align-items:center;gap:3px}.segmented button{border:0;background:none;color:#8e9ca7;padding:5px 8px;font-size:11px;border-radius:4px}.segmented button.selected{background:#eef4f9;color:#34769e;font-weight:600}.segmented span{font-size:9px;margin-left:3px;opacity:.7}.search{display:flex;gap:6px;align-items:center;color:#a5b1ba}.search svg{width:14px;height:14px}.search input{width:112px;border:0;outline:none;padding:6px 0;font-size:11px;color:#637e8f}.search input::placeholder{color:#a3b0ba}.phase-heading{background:#fafbfd;color:#8b9aa5;font-size:10px;font-weight:650;letter-spacing:.45px;text-transform:uppercase;padding:10px 21px;border-bottom:1px solid #eff2f5}.step-row{width:100%;display:grid;grid-template-columns:26px minmax(0,1fr) 115px 15px;align-items:center;gap:8px;padding:16px 20px;background:white;border:0;border-bottom:1px solid #f0f3f6;text-align:left;color:var(--ink)}.step-row:hover{background:#fbfdff}.step-check{width:19px;height:19px;border:1.4px solid #cfdae2;border-radius:50%;display:grid;place-items:center;color:white}.step-check svg{width:12px;height:12px;stroke-width:2.2}.step-row.completed .step-check{background:#57a67b;border-color:#57a67b}.step-title{font-size:12px;font-weight:500;display:block;line-height:1.4}.step-owner{display:block;font-size:10px;color:#9aa7b1;margin-top:4px}.step-duration{font-size:10px;color:#9aa7b1;text-align:right}.step-duration strong{display:block;font-weight:500;color:#728897;font-size:11px}.chevron{width:13px;height:13px;color:#b2bfc9;transform:rotate(-90deg)}.completed .step-title{color:#6d8a79}.panel-footer{display:flex;align-items:center;gap:7px;padding:13px 20px;color:#9ba8b2;font-size:10px}.small-dot{width:5px;height:5px;border-radius:50%;background:#9ab1c1}.context-column{display:grid;gap:17px}.next-step{padding:20px}.aside-heading{display:flex;gap:9px;align-items:center;margin-bottom:19px}.aside-icon{display:grid;place-items:center;width:25px;height:25px;border-radius:50%;background:#ebf4fb;color:#3984bb}.aside-icon svg{width:14px;height:14px}.aside-heading h2{font-size:13px}.next-step h3{font-size:14px;font-weight:600;line-height:1.5;margin:0 0 7px}.next-step p{font-size:11px;color:#8d9da8}.next-time{display:flex;align-items:center;gap:6px;font-size:11px;color:#879cab;margin:17px 0}.next-time svg{width:14px;height:14px}.primary-button{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:10px 12px;background:#197abd;border:1px solid #197abd;border-radius:5px;color:white;font-size:11px;font-weight:550}.primary-button:hover{background:#156ba7}.primary-button svg{width:14px;height:14px}.team-panel{padding:20px}.team-panel h2{font-size:13px;margin-bottom:18px}.person{display:flex;align-items:center;gap:9px;margin:16px 0}.person-avatar{width:31px;height:31px;border-radius:50%;background:#eaf0f5;color:#72899b;font-size:11px;font-weight:600;display:grid;place-items:center}.person-avatar.light{background:#f0f4f6;color:#9aabb7;font-size:10px}.person strong{display:block;font-size:11px;font-weight:600}.person small{font-size:9px;color:#99a8b2;display:block;margin-top:2px}.team-panel p{font-size:10px;line-height:1.7;color:#94a4af;border-top:1px solid var(--line);padding-top:13px;margin-top:15px}.text-button{background:none;border:0;color:#3c85b2;padding:0;margin-top:14px;font-size:11px;display:flex;align-items:center;gap:7px}.text-button svg{width:13px;height:13px}.timing-note{padding:2px 9px;color:#9aa8b2;display:flex;gap:9px;font-size:10px;line-height:1.7}.timing-note svg{width:14px;height:14px;margin-top:2px}footer{display:flex;justify-content:space-between;gap:10px;color:#a6b2bc;font-size:10px;padding:24px 0 20px}footer span{font-size:9px}.canopy-note{margin-bottom:20px;padding:12px 16px;border:1px solid #dcebe4;background:#eef7f2;border-radius:5px;color:#5d8874;font-size:11px;display:flex;gap:9px}.empty-state{padding:42px 26px;text-align:center;color:#8d9faa}.empty-state svg{width:30px;height:30px;color:#b6c5d0;margin-bottom:12px}.empty-state h3{font-size:14px;color:#597283;margin:0 0 8px}.empty-state p{font-size:12px;max-width:370px;margin:auto}.overview-block{padding:22px}.overview-block h3{font-size:13px;margin:0 0 8px}.overview-block p{font-size:12px;color:#8a9ba7}.mobile-only{display:none}.icon-button{display:grid;place-items:center;border:0;background:transparent;color:inherit;padding:8px;border-radius:4px}.icon-button:hover{background:#ffffff18}button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid #4d9bd6;outline-offset:3px}dialog{position:fixed;inset:0 0 0 auto;margin:0;border:0;border-left:1px solid var(--line);padding:0;width:min(440px,100%);height:100dvh;max-height:100dvh;background:white;color:var(--ink);box-shadow:-10px 0 40px #132d3d18}dialog::backdrop{background:#19344645}.drawer-header{padding:24px;display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line)}.drawer-header small{font-size:10px;color:#8ea0ad}.drawer-header h2{font-size:18px;line-height:1.45;margin-top:7px}.drawer-header .icon-button{align-self:start;color:#879aa7}.drawer-body{padding:24px;font-size:12px}.drawer-body h3{font-size:12px;margin:23px 0 7px;font-weight:650}.drawer-body p,.drawer-body li{color:#7d909d;line-height:1.7}.drawer-body ul{padding-left:18px}.drawer-body hr{border:0;border-top:1px solid var(--line);margin:25px 0}.estimate-box{display:flex;align-items:center;gap:12px;background:#f2f7fb;padding:15px;border-radius:5px;margin:20px 0;color:#5f8aa7}.estimate-box strong{font-size:12px;display:block}.estimate-box small{font-size:10px;color:#90a7b7}.drawer-body label{display:grid;gap:6px;margin:17px 0 12px;color:#6b8292}.drawer-body input{border:1px solid #d6e0e8;padding:11px;border-radius:4px;width:100%;font-size:12px}.helper{font-size:11px}.secondary-button{border:1px solid #d4e0e9;background:white;color:#607d90;border-radius:5px;padding:10px;width:100%;font-size:12px}
+@media(min-width:1600px){main{padding-right:50px;padding-left:50px}.content-grid{grid-template-columns:minmax(0,1fr) 310px}}
+@media(max-width:1150px){:root{--sidebar:194px}main{padding:82px 22px 0}.content-grid{grid-template-columns:minmax(0,1fr) 248px;gap:15px}.metric{padding:14px;gap:10px}.metric-icon{width:33px;height:35px}.metric-value strong{font-size:21px}.metrics{gap:12px}.step-row{padding:15px;grid-template-columns:23px minmax(0,1fr) 94px 12px}.toolbar{padding:12px}.segmented button{font-size:10px;padding:5px}.search input{width:88px}.workspace{padding-left:4px}.sidebar{padding:22px 11px}.person small{font-size:8.5px}}
+@media(max-width:900px){:root{--sidebar:184px}.content-grid{grid-template-columns:1fr}.context-column{grid-template-columns:1fr 1fr}.timing-note{grid-column:1/-1}.metrics{grid-template-columns:1fr 1fr}.metrics .metric:last-child{display:none}.page-heading{align-items:start}.process-select{min-width:170px}.process-select select{max-width:180px}h1{font-size:22px}footer{display:block}footer span{display:block;margin-top:5px}}
+@media(max-width:650px){.app-header{height:56px;padding:0 14px}.brand{font-size:16px;gap:8px}.brand small,.brand>.header-divider,.account-label,.header-right>.header-divider{display:none}.brand-mark{width:23px;height:26px;font-size:16px}.mobile-only{display:grid}.header-right{gap:10px}.preview-pill{font-size:9px}.sidebar{transform:translateX(-100%);top:56px;transition:transform .2s;width:224px;box-shadow:8px 0 20px #18334918}.sidebar.open{transform:translateX(0)}main{margin-left:0;padding:76px 16px 0}.breadcrumbs{font-size:9px;gap:7px}.page-heading{margin:20px 0 15px;display:block}h1{font-size:23px}.eyebrow{font-size:9px}.subtitle{font-size:11px}.process-select{margin-top:15px}.process-select>span{display:none}.process-select select{max-width:none;width:100%;font-size:12px;padding:10px}.review-note{font-size:9px;padding:8px 9px;line-height:1.6;margin-bottom:15px}.review-note svg{width:12px;height:12px;align-self:start;margin-top:2px}.metrics{gap:10px;margin-bottom:16px}.metric{padding:12px 10px;gap:9px;min-height:92px}.metric-icon{display:none}.metric>div>span{font-size:10px}.metric-value strong{font-size:23px}.metric-value{gap:6px}.metric small{font-size:9px}.metric-stage{font-size:12px}.context-column{display:none}.panel-heading{padding:16px 14px;gap:10px}.panel-heading p{font-size:10px}h2{font-size:13px}.status-pill{font-size:9px}.toolbar{padding:10px 12px;flex-wrap:wrap;gap:9px}.segmented{gap:4px}.segmented button{font-size:10px;padding:6px 7px;min-height:32px}.search{width:100%;border:1px solid #e5ebf0;padding:2px 8px;border-radius:4px}.search input{width:100%;font-size:11px;padding:7px 0}.phase-heading{padding:9px 14px;font-size:9px}.step-row{padding:14px 12px;gap:7px;grid-template-columns:21px minmax(0,1fr) 12px}.step-title{font-size:12px;line-height:1.5}.step-owner{font-size:9px}.step-duration{grid-column:2;grid-row:auto;text-align:left;font-size:9px;margin-top:-2px}.step-duration strong{font-size:10px;display:inline;margin-right:5px}.step-row>.chevron{grid-column:3;grid-row:1}.step-check{width:17px;height:17px}.panel-footer{padding:12px 14px;font-size:9px}.canopy-note{font-size:10px;padding:11px}footer{font-size:9px;padding:20px 0}.drawer-header{padding:20px}.drawer-body{padding:20px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+[hidden]{display:none!important}button:disabled{opacity:.55;cursor:default}
+.icon-button.mobile-only{display:none}#navigation button{gap:10px;font-size:12px;white-space:nowrap}@media(max-width:650px){.icon-button.mobile-only{display:grid}.step-title{font-size:13px}.drawer-body{font-size:13px}}
+</style></head><body>
+<svg class="symbols" aria-hidden="true"><defs>
+<symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+<symbol id="i-list" viewBox="0 0 24 24"><path d="m3 6 1.5 1.5L7 4M10 6h11M3 13l1.5 1.5L7 11m3 2h11M3 20l1.5 1.5L7 18m3 2h11"/></symbol>
+<symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H5v18h14V8Zm0 0v5h5M8 12h8m-8 4h6"/></symbol>
+<symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 4H3v14h5l4 3v-3h9ZM7 9h10M7 13h6"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3m1-17a3 3 0 0 1 0 6m2 5a5 5 0 0 1 3 4v2"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><path d="m7 10 5 5 5-5"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+<symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-11v1"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/></symbol>
+<symbol id="i-building" viewBox="0 0 24 24"><path d="M4 21V3h13v18M2 21h20m-5-11h4v11M8 7h1m3 0h1m-5 4h1m3 0h1m-5 4h1m3 0h1m-5 6v-3h5v3"/></symbol>
+</defs></svg>
+<header class="app-header"><div class="brand"><button id="menu" class="icon-button mobile-only" aria-label="Abrir navegación" aria-expanded="false"><svg><use href="#i-menu"/></svg></button><span class="brand-mark">U</span><span>UNARA</span><span class="header-divider"></span><small>Portal del cliente</small></div><div class="header-right"><span class="preview-pill">Vista previa</span><span class="header-divider"></span><span class="avatar">CL</span><span class="account-label">Vista cliente</span></div></header>
+<aside class="sidebar" id="sidebar"><p class="sidebar-label">ESPACIO DE TRABAJO</p><div class="workspace"><span class="workspace-icon"><svg><use href="#i-building"/></svg></span><div><strong>Mi cuenta UNARA</strong><small>Servicios y proyectos</small></div></div><p class="sidebar-label">MI PORTAL</p><nav id="navigation" aria-label="Navegación del portal"><button data-tab="overview"><svg><use href="#i-grid"/></svg>Resumen</button><button data-tab="stages" class="active"><svg><use href="#i-list"/></svg>Etapas y avances<span id="side-count" class="nav-count">12</span></button><button data-tab="documents"><svg><use href="#i-file"/></svg>Documentos</button><button data-tab="messages"><svg><use href="#i-chat"/></svg>Mensajes</button><button data-tab="team"><svg><use href="#i-users"/></svg>Mi equipo</button></nav><div class="sidebar-bottom"><span class="support-icon"><svg><use href="#i-info"/></svg></span><strong>Una dirección.<br>Todo tu proceso.</strong><p>UNARA coordina a los especialistas y te acompaña en cada paso.</p><span class="sandbox-label">Entorno de revisión · datos de ejemplo</span></div></aside>
+<main><section role="note" style="background:#fff4d8;border:1px solid #ddc88b;border-radius:8px;padding:14px 16px;margin-bottom:20px;color:#3d3729;font-size:13px"><strong>DEMO VISUAL · Datos sintéticos</strong><br>Sin login funcional ni conexión a Supabase. Puedes explorar los recorridos y simular avances; se borran al recargar. Documentos y envíos desactivados. No introduzcas información real.</section><div class="breadcrumbs">Mi portal <span>/</span> Mis procesos <span>/</span> <strong id="breadcrumb">Constitución de empresa</strong></div><div class="page-heading"><div><div class="eyebrow" id="firm">VISION ACCOUNTS</div><h1 id="title">Constitución de empresa</h1><p class="subtitle">Todo lo que necesitas saber para avanzar, en un mismo lugar.</p></div><label class="process-select"><span>Cambiar proceso</span><select id="process" aria-label="Cambiar proceso"><option value="vision_entity">Constitución de empresa</option><option value="vision_accounting">Onboarding contable</option><option value="northreach_investment">Inversión inmobiliaria</option><option value="amplify_construction">Construcción y entrega</option></select></label></div>
+<div class="review-note"><svg><use href="#i-info"/></svg><span>Vista de diseño. Los avances son de ejemplo y los tiempos están pendientes de validación.</span></div>
+<section class="metrics" aria-label="Resumen de avance"><article class="metric"><div class="metric-icon blue"><svg><use href="#i-list"/></svg></div><div><span>Avance del proceso</span><div class="metric-value"><strong id="percent">0%</strong><small id="completion-count">0 de 12 pasos</small></div><div class="progress-track"><div id="progress-bar"></div></div></div></article><article class="metric"><div class="metric-icon amber"><svg><use href="#i-clock"/></svg></div><div><span>Etapa actual</span><strong class="metric-stage" id="current-stage">Alcance</strong><small id="current-subtitle">Listo para comenzar</small></div></article><article class="metric"><div class="metric-icon green"><svg><use href="#i-users"/></svg></div><div><span>Tu punto de contacto</span><strong class="metric-stage">Coordinación UNARA</strong><small>Responsable por asignar</small></div></article></section>
+<div id="canopy" hidden></div>
+<div class="content-grid"><section class="panel journey-panel"><div class="panel-heading"><div><h2 id="panel-title">Etapas del proceso</h2><p id="panel-description">Consulta cada paso, su tiempo estimado y lo que sigue.</p></div><span id="process-status" class="status-pill neutral">Por iniciar</span></div><div class="toolbar" id="toolbar"><div class="segmented" aria-label="Filtrar etapas"><button class="selected" data-filter="all">Todas <span id="all-count">12</span></button><button data-filter="pending">Pendientes</button><button data-filter="completed">Terminadas</button></div><label class="search"><svg><use href="#i-search"/></svg><input id="search" type="search" placeholder="Buscar etapa…" aria-label="Buscar etapa"></label></div><div id="content"></div><div class="panel-footer"><span class="small-dot"></span><span>Los tiempos se confirman al iniciar cada etapa.</span></div></section>
+<aside class="context-column"><section class="panel next-step"><div class="aside-heading"><span class="aside-icon"><svg><use href="#i-arrow"/></svg></span><h2>Tu próximo paso</h2></div><h3 id="next-title">Diagnóstico y datos iniciales</h3><p id="next-touch">Reunión de diagnóstico</p><div class="next-time"><svg><use href="#i-clock"/></svg><span id="next-duration">1–2 días hábiles</span></div><button class="primary-button" id="next-detail">Ver qué necesito <svg><use href="#i-arrow"/></svg></button></section><section class="panel team-panel"><h2>Te acompañamos</h2><div class="person"><span class="person-avatar">U</span><div><strong>Coordinación UNARA</strong><small>Tu contacto principal · por asignar</small></div></div><div class="person"><span class="person-avatar light" id="firm-avatar">VA</span><div><strong id="specialist">Vision Accounts</strong><small>Especialista del proceso · por asignar</small></div></div><p>UNARA te mantiene al tanto. El especialista resuelve los detalles de su área.</p><button class="text-button" id="team-detail">Ver mi equipo <svg><use href="#i-arrow"/></svg></button></section><section class="timing-note"><svg><use href="#i-info"/></svg><p>Las estimaciones no son fechas comprometidas. Te avisaremos cuando un paso dependa de información o de un tercero.</p></section></aside></div><footer>UNARA · Tu inversión, bien dirigida.<span>Los cambios de esta vista no se guardan en un expediente real.</span></footer></main>
+<dialog id="detail"><div class="drawer-header"><div><small id="detail-phase"></small><h2 id="detail-title"></h2></div><button id="close-detail" class="icon-button" aria-label="Cerrar detalle"><svg><use href="#i-close"/></svg></button></div><div class="drawer-body"><span id="detail-status" class="status-pill neutral"></span><h3>Quién te atiende</h3><p id="detail-owner"></p><h3>Contacto contigo</h3><p id="detail-touch"></p><div class="estimate-box"><svg><use href="#i-clock"/></svg><div><strong id="detail-estimate"></strong><small>Estimación preliminar, pendiente de validar</small></div></div><h3>Este paso termina cuando…</h3><p id="detail-criteria"></p><h3>Cuándo empieza a contar el tiempo</h3><p id="detail-start"></p><h3>Qué podría pausarlo</h3><ul id="detail-pauses"></ul><hr><form id="complete-form"><h3>Probar avance</h3><p class="helper">Sólo para explorar esta vista. No se actualiza ningún expediente.</p><label>Nota sintética para probar (no uses datos reales)<input id="evidence" required maxlength="200" placeholder="Ej. Confirmación de reunión"></label><button class="primary-button" type="submit">Marcar terminado en esta vista</button></form><button class="secondary-button" id="reopen" hidden>Reabrir en esta vista</button></div></dialog>
+<script>window.UNARA_CATALOG={
+  "vision_entity": {
+    "title": "Vision Accounts | New Entity Formation",
+    "status": "proposed_for_firm_validation",
+    "steps": [
+      {
+        "id": "vision_entity_01",
+        "phase": "Alcance",
+        "title": "Diagnóstico y datos iniciales",
+        "owner_role": "Vision Accounts",
+        "client_touch": "Reunión de diagnóstico",
+        "done_criteria": "Objetivo, actividad, jurisdicción y participantes documentados",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": 1,
+          "max": 2,
+          "unit": "business_days",
+          "status": "draft",
+          "basis": "Propuesta operativa interna sin histórico ni validación de la firma",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "vision_entity_02",
+        "phase": "Alcance",
+        "title": "Confirmar estructura y alcance con especialista",
+        "owner_role": "Vision Accounts",
+        "client_touch": "Presentación de recomendación",
+        "done_criteria": "Cliente revisó recomendación y alcance; validación del especialista registrada",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": 2,
+          "max": 5,
+          "unit": "business_days",
+          "status": "draft",
+          "basis": "Propuesta operativa interna sin histórico ni validación de la firma",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "vision_entity_03",
+        "phase": "Contratación",
+        "title": "Presentar propuesta de formación",
+        "owner_role": "Vision Accounts",
+        "client_touch": "Entrega y aclaración de propuesta",
+        "done_criteria": "Versión de propuesta y recepción registradas",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": 1,
+          "max": 3,
+          "unit": "business_days",
+          "status": "draft",
+          "basis": "Propuesta operativa interna sin histórico ni validación de la firma",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "vision_entity_04",
+        "phase": "Contratación",
+        "title": "Formalizar contratación y pago inicial",
+        "owner_role": "Vision Accounts",
+        "client_touch": "Firma y confirmación de pago",
+        "done_criteria": "Contrato y pago previsto en contrato confirmados; sin dar por recibido un pago pendiente",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": 1,
+          "max": 3,
+          "unit": "business_days",
+          "status": "draft",
+          "basis": "Propuesta operativa interna sin histórico ni validación de la firma",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "vision_entity_05",
+        "phase": "Expediente",
+        "title": "Recibir y revisar documentación requerida",
+        "owner_role": "Vision Accounts",
+        "client_touch": "Solicitud y seguimiento documental",
+        "done_criteria": "Checklist específico del caso revisado, faltantes resueltos",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": 2,
+          "max": 5,
+          "unit": "business_days",
+          "status": "draft",
+          "basis": "Propuesta operativa interna sin histórico ni validación de la firma",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "vision_entity_06",
+        "phase": "Preparación",
+        "title": "Validar datos para presentación",
+        "owner_role": "Vision Accounts",
+        "client_touch": "Confirmación del cliente",
+        "done_criteria": "Nombre, participantes, domicilio y datos del trámite confirmados según alcance",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": 1,
+          "max": 2,
+          "unit": "business_days",
+          "status": "draft",
+          "basis": "Propuesta operativa interna sin histórico ni validación de la firma",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "vision_entity_07",
+        "phase": "Trámite",
+        "title": "Presentar formación ante instancia correspondiente",
+        "owner_role": "Vision Accounts",
+        "client_touch": "Aviso de presentación",
+        "done_criteria": "Comprobante de presentación disponible; no equivale a aprobación",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": null,
+          "max": null,
+          "unit": null,
+          "status": "provider_pending",
+          "basis": "Duración específica pendiente de especialista/proveedor; no se infiere un plazo universal",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null,
+          "display": "Por confirmar con responsable y condiciones del caso"
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "vision_entity_08",
+        "phase": "Trámite",
+        "title": "Atender observaciones o requerimientos",
+        "owner_role": "Vision Accounts",
+        "client_touch": "Actualización y solicitud de respuesta",
+        "done_criteria": "Requerimientos resueltos o no aplicables con motivo",
+        "optional": true,
+        "requires": [],
+        "estimate": {
+          "min": null,
+          "max": null,
+          "unit": null,
+          "status": "provider_pending",
+          "basis": "Duración específica pendiente de especialista/proveedor; no se infiere un plazo universal",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null,
+          "display": "Por confirmar con responsable y condiciones del caso"
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "vision_entity_09",
+        "phase": "Resultado",
+        "title": "Recibir y revisar documentos de formación",
+        "owner_role": "Vision Accounts",
+        "client_touch": "Entrega de resultado",
+        "done_criteria": "Resultado/documentos revisados; no se marca entidad formada con sólo presentación",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": null,
+          "max": null,
+          "unit": null,
+          "status": "provider_pending",
+          "basis": "Duración específica pendiente de especialista/proveedor; no se infiere un plazo universal",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null,
+          "display": "Por confirmar con responsable y condiciones del caso"
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "vision_entity_10",
+        "phase": "Resultado",
+        "title": "Gestionar registros e identificadores adicionales según caso",
+        "owner_role": "Vision Accounts",
+        "client_touch": "Explicación de siguientes trámites",
+        "done_criteria": "Registros contratados concluidos o excluidos explícitamente por especialista",
+        "optional": true,
+        "requires": [],
+        "estimate": {
+          "min": null,
+          "max": null,
+          "unit": null,
+          "status": "provider_pending",
+          "basis": "Duración específica pendiente de especialista/proveedor; no se infiere un plazo universal",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null,
+          "display": "Por confirmar con responsable y condiciones del caso"
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "vision_entity_11",
+        "phase": "Entrega",
+        "title": "Entregar carpeta corporativa y explicar obligaciones",
+        "owner_role": "Vision Accounts",
+        "client_touch": "Reunión de entrega",
+        "done_criteria": "Cliente recibió documentos e indicaciones validadas por especialista",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": 1,
+          "max": 3,
+          "unit": "business_days",
+          "status": "draft",
+          "basis": "Propuesta operativa interna sin histórico ni validación de la firma",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "vision_entity_12",
+        "phase": "Continuidad",
+        "title": "Ofrecer onboarding contable si se contrató",
+        "owner_role": "Vision Accounts",
+        "client_touch": "Presentación del responsable contable",
+        "done_criteria": "Cliente decidió continuidad; nuevo proceso sólo si se contrató",
+        "optional": true,
+        "requires": [],
+        "estimate": {
+          "min": 1,
+          "max": 2,
+          "unit": "business_days",
+          "status": "draft",
+          "basis": "Propuesta operativa interna sin histórico ni validación de la firma",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null
+        },
+        "platform": "UNARA"
+      }
+    ],
+    "timing_note": "Los rangos internos son hipótesis para revisión, no SLA. No sumar todos los pasos: hay actividades paralelas, opcionales y dependencias externas. Calendario y fecha de inicio requieren confirmación."
+  },
+  "vision_accounting": {
+    "title": "Vision Accounts | Onboarding contable",
+    "status": "proposed_for_firm_validation",
+    "steps": [
+      {
+        "id": "vision_accounting_01",
+        "phase": "Alcance",
+        "title": "Diagnóstico de operación y servicio contable",
+        "owner_role": "Vision Accounts",
+        "client_touch": "Reunión inicial",
+        "done_criteria": "Actividad, volumen, periodo de inicio y necesidades documentados",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": 1,
+          "max": 2,
+          "unit": "business_days",
+          "status": "draft",
+          "basis": "Propuesta operativa interna sin histórico ni validación de la firma",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "vision_accounting_02",
+        "phase": "Alcance",
+        "title": "Acordar alcance, exclusiones y calendario",
+        "owner_role": "Vision Accounts",
+        "client_touch": "Presentación del servicio",
+        "done_criteria": "Alcance y responsabilidades del cliente/especialista confirmados",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": 1,
+          "max": 3,
+          "unit": "business_days",
+          "status": "draft",
+          "basis": "Propuesta operativa interna sin histórico ni validación de la firma",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "vision_accounting_03",
+        "phase": "Contratación",
+        "title": "Formalizar propuesta, contrato y pago acordado",
+        "owner_role": "Vision Accounts",
+        "client_touch": "Firma y confirmación",
+        "done_criteria": "Documentos y condición de pago verificados",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": 1,
+          "max": 3,
+          "unit": "business_days",
+          "status": "draft",
+          "basis": "Propuesta operativa interna sin histórico ni validación de la firma",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "vision_accounting_04",
+        "phase": "Expediente",
+        "title": "Solicitar carpeta de empresa y periodos previos",
+        "owner_role": "Vision Accounts",
+        "client_touch": "Solicitud documental",
+        "done_criteria": "Documentación aplicable recibida y revisada según checklist del caso",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": 2,
+          "max": 5,
+          "unit": "business_days",
+          "status": "draft",
+          "basis": "Propuesta operativa interna sin histórico ni validación de la firma",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "vision_accounting_05",
+        "phase": "Accesos",
+        "title": "Acordar acceso seguro a sistemas y cuentas",
+        "owner_role": "Vision Accounts",
+        "client_touch": "Sesión de configuración",
+        "done_criteria": "Accesos mínimos aprobados; sin contraseñas en portal o mensajes",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": 1,
+          "max": 3,
+          "unit": "business_days",
+          "status": "draft",
+          "basis": "Propuesta operativa interna sin histórico ni validación de la firma",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "vision_accounting_06",
+        "phase": "Configuración",
+        "title": "Preparar sistema, catálogo y saldos iniciales",
+        "owner_role": "Vision Accounts",
+        "client_touch": "Explicación de configuración",
+        "done_criteria": "Configuración y saldos iniciales validados por responsable contable",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": 3,
+          "max": 7,
+          "unit": "business_days",
+          "status": "draft",
+          "basis": "Propuesta operativa interna sin histórico ni validación de la firma",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "vision_accounting_07",
+        "phase": "Rutina",
+        "title": "Definir entrega periódica de información",
+        "owner_role": "Vision Accounts",
+        "client_touch": "Capacitación del cliente",
+        "done_criteria": "Canal seguro, responsable y fechas de entrega acordados",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": 1,
+          "max": 2,
+          "unit": "business_days",
+          "status": "draft",
+          "basis": "Propuesta operativa interna sin histórico ni validación de la firma",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "vision_accounting_08",
+        "phase": "Calendario",
+        "title": "Validar obligaciones y fechas específicas del caso",
+        "owner_role": "Vision Accounts",
+        "client_touch": "Revisión de calendario con especialista",
+        "done_criteria": "Calendario validado; no fechas fiscales universales inventadas",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": 2,
+          "max": 5,
+          "unit": "business_days",
+          "status": "draft",
+          "basis": "Propuesta operativa interna sin histórico ni validación de la firma",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "vision_accounting_09",
+        "phase": "Arranque",
+        "title": "Recibir primer periodo de información",
+        "owner_role": "Vision Accounts",
+        "client_touch": "Recordatorio y acuse",
+        "done_criteria": "Paquete completo o faltantes identificados",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": 2,
+          "max": 5,
+          "unit": "business_days",
+          "status": "draft",
+          "basis": "Propuesta operativa interna sin histórico ni validación de la firma",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "vision_accounting_10",
+        "phase": "Arranque",
+        "title": "Procesar y conciliar primer periodo",
+        "owner_role": "Vision Accounts",
+        "client_touch": "Aclaración de movimientos",
+        "done_criteria": "Responsable confirmó conciliaciones y excepciones",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": 3,
+          "max": 7,
+          "unit": "business_days",
+          "status": "draft",
+          "basis": "Propuesta operativa interna sin histórico ni validación de la firma",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "vision_accounting_11",
+        "phase": "Revisión",
+        "title": "Validar primer ciclo de entrega y revisión en CANOPY",
+        "owner_role": "Vision Accounts",
+        "client_touch": "Reunión de revisión",
+        "done_criteria": "Cliente y responsable contable confirmaron recepción y revisión del primer ciclo en CANOPY",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": 1,
+          "max": 3,
+          "unit": "business_days",
+          "status": "draft",
+          "basis": "Propuesta operativa interna sin histórico ni validación de la firma",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null
+        },
+        "platform": "UNARA → CANOPY"
+      },
+      {
+        "id": "vision_accounting_12",
+        "phase": "Continuidad",
+        "title": "Confirmar acceso y traspaso operativo a CANOPY",
+        "owner_role": "Vision Accounts",
+        "client_touch": "Sesión de acceso y orientación en CANOPY",
+        "done_criteria": "Cliente confirmó acceso a CANOPY, responsable contable, siguiente entrega y canal de soporte; continuidad contable se lleva allí",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": 1,
+          "max": 2,
+          "unit": "business_days",
+          "status": "draft",
+          "basis": "Propuesta operativa interna sin histórico ni validación de la firma",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null
+        },
+        "platform": "UNARA → CANOPY"
+      }
+    ],
+    "timing_note": "Los rangos internos son hipótesis para revisión, no SLA. No sumar todos los pasos: hay actividades paralelas, opcionales y dependencias externas. Calendario y fecha de inicio requieren confirmación.",
+    "ongoing_platform": {
+      "name": "CANOPY",
+      "url": null,
+      "status": "URL y acceso por confirmar",
+      "boundary": "UNARA muestra onboarding y traspaso. Operación contable periódica continúa en CANOPY; no se duplica ni sincroniza sin integración confirmada."
+    }
+  },
+  "northreach_investment": {
+    "title": "Northreach / UNARA | Inversión de terreno a salida",
+    "status": "proposed_for_firm_validation",
+    "steps": [
+      {
+        "id": "northreach_investment_01",
+        "phase": "Diagnóstico",
+        "title": "Definir objetivos, presupuesto y estrategia de salida",
+        "owner_role": "Northreach",
+        "client_touch": "Reunión de perfilamiento",
+        "done_criteria": "Objetivo, criterios de búsqueda y venta/renta preliminar registrados",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": 1,
+          "max": 3,
+          "unit": "business_days",
+          "status": "draft",
+          "basis": "Propuesta operativa interna sin histórico ni validación de la firma",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "northreach_investment_02",
+        "phase": "Contratación",
+        "title": "Generar y explicar contrato de servicio al cliente",
+        "owner_role": "Northreach",
+        "client_touch": "Presentación de contrato",
+        "done_criteria": "Versión, alcance y explicación documentados",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": 2,
+          "max": 5,
+          "unit": "business_days",
+          "status": "draft",
+          "basis": "Propuesta operativa interna sin histórico ni validación de la firma",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "northreach_investment_03",
+        "phase": "Contratación",
+        "title": "Formalizar contrato y primer pago acordado",
+        "owner_role": "Northreach",
+        "client_touch": "Firma y confirmación de pago",
+        "done_criteria": "Contrato y recepción de pago verificados según condiciones",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": 1,
+          "max": 3,
+          "unit": "business_days",
+          "status": "draft",
+          "basis": "Propuesta operativa interna sin histórico ni validación de la firma",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "northreach_investment_04",
+        "phase": "Búsqueda",
+        "title": "Presentar opciones de terreno",
+        "owner_role": "Northreach",
+        "client_touch": "Reunión de opciones",
+        "done_criteria": "Opciones con información verificable presentadas; sin inventar disponibilidad",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": null,
+          "max": null,
+          "unit": null,
+          "status": "provider_pending",
+          "basis": "Duración específica pendiente de especialista/proveedor; no se infiere un plazo universal",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null,
+          "display": "Por confirmar con responsable y condiciones del caso"
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "northreach_investment_05",
+        "phase": "Búsqueda",
+        "title": "Recabar selección y autorización para evaluar",
+        "owner_role": "Northreach",
+        "client_touch": "Decisión sobre shortlist",
+        "done_criteria": "Opción seleccionada y autorización de siguiente paso registradas",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": 1,
+          "max": 3,
+          "unit": "business_days",
+          "status": "draft",
+          "basis": "Propuesta operativa interna sin histórico ni validación de la firma",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "northreach_investment_06",
+        "phase": "Evaluación",
+        "title": "Coordinar due diligence y viabilidad",
+        "owner_role": "Northreach",
+        "client_touch": "Revisión de hallazgos con especialistas",
+        "done_criteria": "Riesgos, restricciones y presupuesto revisados; decisión registrada",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": null,
+          "max": null,
+          "unit": null,
+          "status": "provider_pending",
+          "basis": "Duración específica pendiente de especialista/proveedor; no se infiere un plazo universal",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null,
+          "display": "Por confirmar con responsable y condiciones del caso"
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "northreach_investment_07",
+        "phase": "Oferta",
+        "title": "Preparar y negociar oferta según autorización",
+        "owner_role": "Northreach",
+        "client_touch": "Revisión y autorización de oferta",
+        "done_criteria": "Condiciones autorizadas y negociación documentadas",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": 2,
+          "max": 5,
+          "unit": "business_days",
+          "status": "draft",
+          "basis": "Propuesta operativa interna sin histórico ni validación de la firma",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "northreach_investment_08",
+        "phase": "Cierre terreno",
+        "title": "Presentar al cliente con compañía de títulos",
+        "owner_role": "Northreach",
+        "client_touch": "Introducción con responsable de títulos",
+        "done_criteria": "Introducción aceptada, responsable y próximos pasos claros",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": 1,
+          "max": 3,
+          "unit": "business_days",
+          "status": "draft",
+          "basis": "Propuesta operativa interna sin histórico ni validación de la firma",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "northreach_investment_09",
+        "phase": "Financiamiento",
+        "title": "Presentar al lender si aplica",
+        "owner_role": "Northreach",
+        "client_touch": "Introducción con lender",
+        "done_criteria": "Contacto y alcance aceptados; si no hay crédito, no aplicable justificado",
+        "optional": true,
+        "requires": [],
+        "estimate": {
+          "min": 1,
+          "max": 3,
+          "unit": "business_days",
+          "status": "draft",
+          "basis": "Propuesta operativa interna sin histórico ni validación de la firma",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "northreach_investment_10",
+        "phase": "Financiamiento",
+        "title": "Dar seguimiento a condiciones de financiamiento",
+        "owner_role": "Northreach",
+        "client_touch": "Actualización de condiciones",
+        "done_criteria": "Condiciones confirmadas por lender o no aplicable; sin prometer aprobación",
+        "optional": true,
+        "requires": [],
+        "estimate": {
+          "min": null,
+          "max": null,
+          "unit": null,
+          "status": "provider_pending",
+          "basis": "Duración específica pendiente de especialista/proveedor; no se infiere un plazo universal",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null,
+          "display": "Por confirmar con responsable y condiciones del caso"
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "northreach_investment_11",
+        "phase": "Cierre terreno",
+        "title": "Coordinar revisión documental y fondos con especialistas",
+        "owner_role": "Northreach",
+        "client_touch": "Revisión previa al cierre",
+        "done_criteria": "Checklist de títulos/lender/especialistas concluido; fondos sin instrucciones bancarias públicas",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": null,
+          "max": null,
+          "unit": null,
+          "status": "provider_pending",
+          "basis": "Duración específica pendiente de especialista/proveedor; no se infiere un plazo universal",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null,
+          "display": "Por confirmar con responsable y condiciones del caso"
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "northreach_investment_12",
+        "phase": "Cierre terreno",
+        "title": "Confirmar compra y entrega de expediente de terreno",
+        "owner_role": "Northreach",
+        "client_touch": "Confirmación y entrega de cierre",
+        "done_criteria": "Cierre confirmado por títulos y documentos disponibles; no sólo oferta aceptada",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": null,
+          "max": null,
+          "unit": null,
+          "status": "provider_pending",
+          "basis": "Duración específica pendiente de especialista/proveedor; no se infiere un plazo universal",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null,
+          "display": "Por confirmar con responsable y condiciones del caso"
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "northreach_investment_13",
+        "phase": "Handoff",
+        "title": "Presentar Amplify y transferir alcance de proyecto",
+        "owner_role": "UNARA",
+        "client_touch": "Reunión de traspaso Northreach–Amplify",
+        "done_criteria": "Cliente conoce responsables, alcance y siguiente paso; sólo si construcción contratada",
+        "optional": true,
+        "requires": [],
+        "estimate": {
+          "min": 1,
+          "max": 3,
+          "unit": "business_days",
+          "status": "draft",
+          "basis": "Propuesta operativa interna sin histórico ni validación de la firma",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "northreach_investment_14",
+        "phase": "Preobra",
+        "title": "Dar seguimiento a propuesta, contrato y condiciones de arranque",
+        "owner_role": "UNARA",
+        "client_touch": "Revisión de preparación con Amplify",
+        "done_criteria": "Amplify confirma contrato, condiciones y fecha de arranque",
+        "optional": true,
+        "requires": [],
+        "estimate": {
+          "min": null,
+          "max": null,
+          "unit": null,
+          "status": "provider_pending",
+          "basis": "Duración específica pendiente de especialista/proveedor; no se infiere un plazo universal",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null,
+          "display": "Por confirmar con responsable y condiciones del caso"
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "northreach_investment_15",
+        "phase": "Obra",
+        "title": "Acompañar seguimiento con reportes de Amplify",
+        "owner_role": "UNARA",
+        "client_touch": "Revisión periódica de avance",
+        "done_criteria": "Reportes y pendientes revisados; ejecución y detalle técnico corresponden a Amplify",
+        "optional": true,
+        "requires": [],
+        "estimate": {
+          "min": null,
+          "max": null,
+          "unit": null,
+          "status": "provider_pending",
+          "basis": "Duración específica pendiente de especialista/proveedor; no se infiere un plazo universal",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null,
+          "display": "Por confirmar con responsable y condiciones del caso"
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "northreach_investment_16",
+        "phase": "Entrega",
+        "title": "Acompañar recepción y cierre de pendientes de obra",
+        "owner_role": "UNARA",
+        "client_touch": "Reunión de entrega con Amplify",
+        "done_criteria": "Recepción, pendientes y responsables documentados por Amplify/cliente",
+        "optional": true,
+        "requires": [],
+        "estimate": {
+          "min": null,
+          "max": null,
+          "unit": null,
+          "status": "provider_pending",
+          "basis": "Duración específica pendiente de especialista/proveedor; no se infiere un plazo universal",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null,
+          "display": "Por confirmar con responsable y condiciones del caso"
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "northreach_investment_17",
+        "phase": "Salida",
+        "title": "Actualizar decisión de venta o renta",
+        "owner_role": "UNARA",
+        "client_touch": "Revisión de estrategia de salida",
+        "done_criteria": "Cliente decide ruta con información actual; no garantía de precio/rendimiento",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": 2,
+          "max": 5,
+          "unit": "business_days",
+          "status": "draft",
+          "basis": "Propuesta operativa interna sin histórico ni validación de la firma",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "northreach_investment_18",
+        "phase": "Salida",
+        "title": "Coordinar comercialización para venta si elegida",
+        "owner_role": "Northreach",
+        "client_touch": "Presentación con responsable comercial acordado",
+        "done_criteria": "Mandato/alcance y estrategia confirmados; rama opcional",
+        "optional": true,
+        "requires": [],
+        "estimate": {
+          "min": null,
+          "max": null,
+          "unit": null,
+          "status": "provider_pending",
+          "basis": "Duración específica pendiente de especialista/proveedor; no se infiere un plazo universal",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null,
+          "display": "Por confirmar con responsable y condiciones del caso"
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "northreach_investment_19",
+        "phase": "Salida",
+        "title": "Coordinar renta y administración si elegida",
+        "owner_role": "UNARA / Casa Norte",
+        "client_touch": "Presentación de responsable de renta",
+        "done_criteria": "Alcance y traspaso aceptados; rama opcional",
+        "optional": true,
+        "requires": [],
+        "estimate": {
+          "min": null,
+          "max": null,
+          "unit": null,
+          "status": "provider_pending",
+          "basis": "Duración específica pendiente de especialista/proveedor; no se infiere un plazo universal",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null,
+          "display": "Por confirmar con responsable y condiciones del caso"
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "northreach_investment_20",
+        "phase": "Cierre inversión",
+        "title": "Confirmar cierre de venta o inicio de operación en renta",
+        "owner_role": "UNARA",
+        "client_touch": "Reunión de cierre o continuidad",
+        "done_criteria": "Resultado y documentos verificados; renta recurrente queda en proceso propio",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": null,
+          "max": null,
+          "unit": null,
+          "status": "provider_pending",
+          "basis": "Duración específica pendiente de especialista/proveedor; no se infiere un plazo universal",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null,
+          "display": "Por confirmar con responsable y condiciones del caso"
+        },
+        "platform": "UNARA"
+      }
+    ],
+    "responsibility_note": "Recorrido ampliado por indicación de Jorge del 17 nov. No amplía por sí solo obligaciones contractuales Northreach: después del cierre comercial UNARA acompaña, Amplify ejecuta obra y Casa Norte administra si se contrata.",
+    "branches": {
+      "sale": [
+        "northreach_investment_18"
+      ],
+      "rental": [
+        "northreach_investment_19"
+      ]
+    },
+    "timing_note": "Los rangos internos son hipótesis para revisión, no SLA. No sumar todos los pasos: hay actividades paralelas, opcionales y dependencias externas. Calendario y fecha de inicio requieren confirmación."
+  },
+  "amplify_construction": {
+    "title": "Amplify | Construcción y entrega",
+    "status": "proposed_for_firm_validation",
+    "steps": [
+      {
+        "id": "amplify_construction_01",
+        "phase": "Handoff",
+        "title": "Presentar Amplify al cliente y confirmar responsables",
+        "owner_role": "UNARA / Amplify",
+        "client_touch": "Reunión de presentación",
+        "done_criteria": "Cliente conoce coordinador UNARA y responsable técnico Amplify",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": 1,
+          "max": 3,
+          "unit": "business_days",
+          "status": "draft",
+          "basis": "Propuesta operativa interna sin histórico ni validación de la firma",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "amplify_construction_02",
+        "phase": "Alcance",
+        "title": "Recibir terreno, proyecto y restricciones",
+        "owner_role": "Amplify",
+        "client_touch": "Sesión técnica de alcance",
+        "done_criteria": "Información y faltantes del proyecto identificados",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": 2,
+          "max": 5,
+          "unit": "business_days",
+          "status": "draft",
+          "basis": "Propuesta operativa interna sin histórico ni validación de la firma",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "amplify_construction_03",
+        "phase": "Alcance",
+        "title": "Definir alcance, supuestos y exclusiones de construcción",
+        "owner_role": "Amplify",
+        "client_touch": "Revisión con cliente",
+        "done_criteria": "Alcance y criterios de entrega acordados para cotizar",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": 3,
+          "max": 7,
+          "unit": "business_days",
+          "status": "draft",
+          "basis": "Propuesta operativa interna sin histórico ni validación de la firma",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "amplify_construction_04",
+        "phase": "Propuesta",
+        "title": "Presentar propuesta de construcción y calendario",
+        "owner_role": "Amplify",
+        "client_touch": "Presentación de presupuesto",
+        "done_criteria": "Versión, costos, calendario y condiciones revisados con cliente",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": 5,
+          "max": 10,
+          "unit": "business_days",
+          "status": "draft",
+          "basis": "Propuesta operativa interna sin histórico ni validación de la firma",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "amplify_construction_05",
+        "phase": "Contratación",
+        "title": "Formalizar contrato y anticipo acordado",
+        "owner_role": "Amplify",
+        "client_touch": "Firma y confirmación de pago",
+        "done_criteria": "Contrato y condición de pago confirmados",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": 2,
+          "max": 5,
+          "unit": "business_days",
+          "status": "draft",
+          "basis": "Propuesta operativa interna sin histórico ni validación de la firma",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "amplify_construction_06",
+        "phase": "Preobra",
+        "title": "Confirmar diseño, permisos, seguros y financiamiento aplicables",
+        "owner_role": "Amplify",
+        "client_touch": "Revisión de condiciones de arranque",
+        "done_criteria": "Especialistas confirman requisitos del proyecto; no listado legal universal",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": null,
+          "max": null,
+          "unit": null,
+          "status": "provider_pending",
+          "basis": "Duración específica pendiente de especialista/proveedor; no se infiere un plazo universal",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null,
+          "display": "Por confirmar con responsable y condiciones del caso"
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "amplify_construction_07",
+        "phase": "Preobra",
+        "title": "Confirmar programa, hitos y protocolo de cambios",
+        "owner_role": "Amplify",
+        "client_touch": "Reunión prearranque",
+        "done_criteria": "Fechas y responsables acordados, control de cambios explicado",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": 2,
+          "max": 5,
+          "unit": "business_days",
+          "status": "draft",
+          "basis": "Propuesta operativa interna sin histórico ni validación de la firma",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "amplify_construction_08",
+        "phase": "Arranque",
+        "title": "Confirmar inicio y preparación de sitio",
+        "owner_role": "Amplify",
+        "client_touch": "Aviso y reunión de arranque",
+        "done_criteria": "Inicio real confirmado y primera evidencia autorizada",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": null,
+          "max": null,
+          "unit": null,
+          "status": "provider_pending",
+          "basis": "Duración específica pendiente de especialista/proveedor; no se infiere un plazo universal",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null,
+          "display": "Por confirmar con responsable y condiciones del caso"
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "amplify_construction_09",
+        "phase": "Ejecución",
+        "title": "Preparación de terreno y obra inicial según proyecto",
+        "owner_role": "Amplify",
+        "client_touch": "Reporte de hito y siguiente paso",
+        "done_criteria": "Responsable técnico valida avance e inspecciones aplicables",
+        "optional": true,
+        "requires": [],
+        "estimate": {
+          "min": null,
+          "max": null,
+          "unit": null,
+          "status": "provider_pending",
+          "basis": "Duración específica pendiente de especialista/proveedor; no se infiere un plazo universal",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null,
+          "display": "Por confirmar con responsable y condiciones del caso"
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "amplify_construction_10",
+        "phase": "Ejecución",
+        "title": "Cimentación según proyecto",
+        "owner_role": "Amplify",
+        "client_touch": "Reporte de hito",
+        "done_criteria": "Avance y revisión técnica documentados; sólo cuando aplica",
+        "optional": true,
+        "requires": [],
+        "estimate": {
+          "min": null,
+          "max": null,
+          "unit": null,
+          "status": "provider_pending",
+          "basis": "Duración específica pendiente de especialista/proveedor; no se infiere un plazo universal",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null,
+          "display": "Por confirmar con responsable y condiciones del caso"
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "amplify_construction_11",
+        "phase": "Ejecución",
+        "title": "Estructura y envolvente según proyecto",
+        "owner_role": "Amplify",
+        "client_touch": "Reporte de hito",
+        "done_criteria": "Etapa técnica verificada por responsable",
+        "optional": true,
+        "requires": [],
+        "estimate": {
+          "min": null,
+          "max": null,
+          "unit": null,
+          "status": "provider_pending",
+          "basis": "Duración específica pendiente de especialista/proveedor; no se infiere un plazo universal",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null,
+          "display": "Por confirmar con responsable y condiciones del caso"
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "amplify_construction_12",
+        "phase": "Ejecución",
+        "title": "Instalaciones y revisiones intermedias",
+        "owner_role": "Amplify",
+        "client_touch": "Reporte y decisiones de coordinación",
+        "done_criteria": "Instalaciones/revisiones correspondientes documentadas",
+        "optional": true,
+        "requires": [],
+        "estimate": {
+          "min": null,
+          "max": null,
+          "unit": null,
+          "status": "provider_pending",
+          "basis": "Duración específica pendiente de especialista/proveedor; no se infiere un plazo universal",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null,
+          "display": "Por confirmar con responsable y condiciones del caso"
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "amplify_construction_13",
+        "phase": "Ejecución",
+        "title": "Interiores y acabados según alcance",
+        "owner_role": "Amplify",
+        "client_touch": "Revisión de selecciones y avance",
+        "done_criteria": "Selecciones aprobadas y avance revisado; coordinación con Umber si contratado",
+        "optional": true,
+        "requires": [],
+        "estimate": {
+          "min": null,
+          "max": null,
+          "unit": null,
+          "status": "provider_pending",
+          "basis": "Duración específica pendiente de especialista/proveedor; no se infiere un plazo universal",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null,
+          "display": "Por confirmar con responsable y condiciones del caso"
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "amplify_construction_14",
+        "phase": "Control",
+        "title": "Revisar cambios, costos y calendario",
+        "owner_role": "Amplify / UNARA",
+        "client_touch": "Revisión de variaciones con cliente",
+        "done_criteria": "Cada cambio tiene alcance, impacto y autorización correspondiente; no aprobación automática",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": null,
+          "max": null,
+          "unit": null,
+          "status": "provider_pending",
+          "basis": "Duración específica pendiente de especialista/proveedor; no se infiere un plazo universal",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null,
+          "display": "Por confirmar con responsable y condiciones del caso"
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "amplify_construction_15",
+        "phase": "Preentrega",
+        "title": "Realizar recorrido y lista de pendientes",
+        "owner_role": "Amplify",
+        "client_touch": "Recorrido con cliente",
+        "done_criteria": "Punch list y responsables/fechas registrados",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": 1,
+          "max": 3,
+          "unit": "business_days",
+          "status": "draft",
+          "basis": "Propuesta operativa interna sin histórico ni validación de la firma",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "amplify_construction_16",
+        "phase": "Entrega",
+        "title": "Resolver pendientes y formalizar recepción",
+        "owner_role": "Amplify",
+        "client_touch": "Revisión y entrega",
+        "done_criteria": "Recepción y documentos aplicables confirmados; pendientes abiertos no ocultos",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": null,
+          "max": null,
+          "unit": null,
+          "status": "provider_pending",
+          "basis": "Duración específica pendiente de especialista/proveedor; no se infiere un plazo universal",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null,
+          "display": "Por confirmar con responsable y condiciones del caso"
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "amplify_construction_17",
+        "phase": "Entrega",
+        "title": "Entregar manuales, garantías y cierre financiero aplicables",
+        "owner_role": "Amplify",
+        "client_touch": "Explicación de carpeta de entrega",
+        "done_criteria": "Cliente recibió documentos y cierre de cuentas revisado",
+        "optional": false,
+        "requires": [],
+        "estimate": {
+          "min": 2,
+          "max": 5,
+          "unit": "business_days",
+          "status": "draft",
+          "basis": "Propuesta operativa interna sin histórico ni validación de la firma",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null
+        },
+        "platform": "UNARA"
+      },
+      {
+        "id": "amplify_construction_18",
+        "phase": "Postventa",
+        "title": "Atender incidencias y seguimiento de garantías",
+        "owner_role": "Amplify",
+        "client_touch": "Canal y seguimiento postventa",
+        "done_criteria": "Incidencias resueltas o trasladadas con responsable/fecha; duración según contrato",
+        "optional": true,
+        "requires": [],
+        "estimate": {
+          "min": null,
+          "max": null,
+          "unit": null,
+          "status": "provider_pending",
+          "basis": "Duración específica pendiente de especialista/proveedor; no se infiere un plazo universal",
+          "start_condition": "Alcance acordado, información completa y confirmación de inicio del responsable",
+          "pause_reasons": [
+            "Pendiente del cliente",
+            "Pendiente de tercero",
+            "Cambio de alcance",
+            "Revisión del especialista"
+          ],
+          "elapsed_not_effort": true,
+          "approved_by": null,
+          "approved_at": null,
+          "display": "Por confirmar con responsable y condiciones del caso"
+        },
+        "platform": "UNARA"
+      }
+    ],
+    "repeating_touchpoints": [
+      {
+        "id": "weekly_report",
+        "title": "Reporte semanal de obra",
+        "owner_role": "Amplify",
+        "content": [
+          "Ejecutado",
+          "Evidencia autorizada",
+          "Próximos trabajos",
+          "Decisiones y variaciones",
+          "Pendientes con fecha"
+        ]
+      }
+    ],
+    "timing_note": "Los rangos internos son hipótesis para revisión, no SLA. No sumar todos los pasos: hay actividades paralelas, opcionales y dependencias externas. Calendario y fecha de inicio requieren confirmación."
+  }
+}
+;</script><script>const $=id=>document.getElementById(id),meta={vision_entity:{title:'Constitución de empresa',firm:'Vision Accounts',avatar:'VA'},vision_accounting:{title:'Onboarding contable',firm:'Vision Accounts',avatar:'VA'},northreach_investment:{title:'Inversión inmobiliaria',firm:'Northreach / UNARA',avatar:'NR'},amplify_construction:{title:'Construcción y entrega',firm:'Amplify',avatar:'AD'}};let catalog={},active='vision_entity',tab='stages',filter='all',selected=null;const complete=new Set();const icon=name=>{const s=document.createElementNS('http://www.w3.org/2000/svg','svg'),u=document.createElementNS('http://www.w3.org/2000/svg','use');u.setAttribute('href','#i-'+name);s.append(u);return s};const node=(t,text,cls)=>{const n=document.createElement(t);if(text!=null)n.textContent=text;if(cls)n.className=cls;return n};function duration(s,compact=false){const e=s.estimate;if(e.min==null)return compact?'Por confirmar':'Tiempo por confirmar con el responsable';return e.min+'–'+e.max+(compact?' días hábiles':' días hábiles · por validar')}
+function openStep(id){selected=catalog[active].steps.find(s=>s.id===id);if(!selected)return;const s=selected;$('detail-phase').textContent=s.phase.toUpperCase();$('detail-title').textContent=s.title;$('detail-status').textContent=complete.has(s.id)?'Terminado en esta vista':'Pendiente';$('detail-status').className='status-pill '+(complete.has(s.id)?'done':'neutral');$('detail-owner').textContent=s.owner_role;$('detail-touch').textContent=s.client_touch;$('detail-estimate').textContent=duration(s);$('detail-criteria').textContent=s.done_criteria;$('detail-start').textContent=s.estimate.start_condition;$('detail-pauses').replaceChildren(...s.estimate.pause_reasons.map(x=>node('li',x)));$('complete-form').hidden=complete.has(s.id);$('reopen').hidden=!complete.has(s.id);$('evidence').value='';if(!$('detail').open)$('detail').showModal()}
+function setTab(value){tab=value;document.querySelectorAll('#navigation button').forEach(b=>{const on=b.dataset.tab===value;b.classList.toggle('active',on);b.setAttribute('aria-current',on?'page':'false')});$('sidebar').classList.remove('open');$('menu').setAttribute('aria-expanded','false');renderContent()}
+function update(){const j=catalog[active],m=meta[active],done=j.steps.filter(s=>complete.has(s.id)).length,percent=Math.round(done/j.steps.length*100),next=j.steps.find(s=>!complete.has(s.id));$('title').textContent=m.title;$('breadcrumb').textContent=m.title;$('firm').textContent=m.firm.toUpperCase();$('side-count').textContent=j.steps.length;$('all-count').textContent=j.steps.length;$('completion-count').textContent=done+' de '+j.steps.length+' pasos';$('percent').textContent=percent+'%';$('progress-bar').style.width=percent+'%';$('current-stage').textContent=next?.phase||'Recorrido revisado';$('current-subtitle').textContent=done?'Avance de ejemplo':'Listo para comenzar';$('specialist').textContent=m.firm;$('firm-avatar').textContent=m.avatar;$('next-title').textContent=next?.title||'Todos los pasos revisados';$('next-touch').textContent=next?.client_touch||'La revisión de ejemplo ha terminado.';$('next-duration').textContent=next?duration(next,true):'Sin próximo paso';$('next-detail').disabled=!next;$('next-detail').onclick=()=>next&&openStep(next.id);$('process-status').textContent=done===j.steps.length?'Revisado':done?'En curso':'Por iniciar';$('process-status').className='status-pill '+(done===j.steps.length?'done':done?'working':'neutral');$('canopy').hidden=!j.ongoing_platform;$('canopy').replaceChildren();if(j.ongoing_platform){const p=node('div',null,'canopy-note');p.append(icon('info'),node('span','Al terminar el onboarding, tu operación contable continúa en CANOPY. Aquí verás la confirmación del traspaso.'));$('canopy').append(p)}renderContent()}
+function stepRow(s){const b=node('button',null,'step-row'+(complete.has(s.id)?' completed':''));b.dataset.step=s.id;b.setAttribute('aria-label',s.title+' · '+(complete.has(s.id)?'Terminado':'Pendiente'));const check=node('span',null,'step-check');if(complete.has(s.id))check.append(icon('check'));const title=node('span');title.append(node('span',s.title,'step-title'),node('span',s.owner_role,'step-owner'));const time=node('span',null,'step-duration');time.append(node('strong',duration(s,true)),node('span',s.estimate.min==null?'Según el caso':'Por validar'));const arrow=icon('down');arrow.classList.add('chevron');b.append(check,title,time,arrow);b.onclick=()=>openStep(s.id);return b}
+function empty(type,title,text){const n=node('div',null,'empty-state');n.append(icon(type),node('h3',title),node('p',text));$('content').append(n)}
+function renderContent(){if(!catalog[active])return;const j=catalog[active];$('content').replaceChildren();$('toolbar').hidden=tab!=='stages';const names={stages:['Etapas del proceso','Consulta cada paso, su tiempo estimado y lo que sigue.'],overview:['Resumen del proceso','Tu avance y lo que requiere tu atención.'],documents:['Documentos del proceso','Archivos compartidos por tu equipo.'],messages:['Mensajes','Conversaciones con contexto, en un solo lugar.'],team:['Tu equipo de atención','Un punto de contacto, con el especialista adecuado.']};$('panel-title').textContent=names[tab][0];$('panel-description').textContent=names[tab][1];if(tab==='stages'){const q=$('search').value.trim().toLocaleLowerCase('es');const steps=j.steps.filter(s=>(filter==='all'||(filter==='completed'?complete.has(s.id):!complete.has(s.id)))&&[s.title,s.phase,s.owner_role].join(' ').toLocaleLowerCase('es').includes(q));let phase='';for(const s of steps){if(phase!==s.phase){phase=s.phase;$('content').append(node('div',phase,'phase-heading'))}$('content').append(stepRow(s))}if(!steps.length)empty('list','No hay etapas en esta vista','Prueba otro filtro o cambia tu búsqueda.')}else if(tab==='overview'){const box=node('div',null,'overview-block');box.append(node('h3','Tu siguiente paso'),node('p','Cada etapa incluye un contacto, un responsable y un criterio de cierre. Los tiempos todavía están por validar.'));$('content').append(box);for(const s of j.steps.filter(s=>!complete.has(s.id)).slice(0,3))$('content').append(stepRow(s))}else if(tab==='documents')empty('file','Tus documentos aparecerán aquí','No hay archivos compartidos en esta vista de diseño.');else if(tab==='messages')empty('chat','Aquí comienza la conversación','No hay mensajes en esta vista. Tu equipo de UNARA será tu punto de contacto.');else{const box=node('div',null,'overview-block');box.append(node('h3','Coordinación UNARA'),node('p','Responsable por asignar. Te acompaña durante todo el proceso.'));const box2=node('div',null,'overview-block');box2.append(node('h3',meta[active].firm),node('p','Especialista por asignar. Atiende el alcance contratado de este proceso.'));$('content').append(box,box2)}}
+$('process').onchange=()=>{active=$('process').value;filter='all';$('search').value='';document.querySelectorAll('[data-filter]').forEach(b=>b.classList.toggle('selected',b.dataset.filter==='all'));update()};document.querySelectorAll('#navigation button').forEach(b=>b.onclick=()=>setTab(b.dataset.tab));document.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>{filter=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(x=>{x.classList.toggle('selected',x===b);x.setAttribute('aria-pressed',x===b?'true':'false')});renderContent()});$('search').oninput=renderContent;$('team-detail').onclick=()=>setTab('team');$('menu').onclick=()=>{$('sidebar').classList.toggle('open');$('menu').setAttribute('aria-expanded',$('sidebar').classList.contains('open')?'true':'false')};$('close-detail').onclick=()=>$('detail').close();$('complete-form').onsubmit=e=>{e.preventDefault();if(!$('evidence').value.trim())return;complete.add(selected.id);$('detail').close();update()};$('reopen').onclick=()=>{complete.delete(selected.id);$('detail').close();update()};catalog=window.UNARA_CATALOG;update();</script></body></html>
