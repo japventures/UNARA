@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex,nofollow">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self' https://vgksadeprdrrvllknqul.supabase.co; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>UNARA · Portal interno</title>
+  <link rel="stylesheet" href="auth-shell.css">
+<link rel="stylesheet" href="workspace.css">
+<link rel="stylesheet" href="step-guide.css">
+<link rel="stylesheet" href="admin-shell.css">
+<link rel="stylesheet" href="project-access.css"></head>
+<body data-view="inactive">
+  <header><a class="wordmark" href="/portal/" aria-label="UNARA"><span aria-hidden="true">U</span> UNARA</a><p>Portal interno</p><button type="button" id="logout" data-testid="logout" class="light" hidden>Cerrar sesión</button></header>
+  <main>
+    <section class="auth-card" id="access" aria-labelledby="access-title">
+      <p class="eyebrow">ACCESO INTERNO</p><h1 id="access-title">Tu cuenta UNARA</h1>
+      <p id="status" class="status" role="status" aria-live="polite" aria-atomic="true">Acceso interno desactivado hasta verificar la configuración.</p>
+      <section id="login" hidden>
+        <form id="login-form">
+          <label for="email">Correo<input id="email" data-testid="email" type="email" autocomplete="username" maxlength="254" required></label>
+          <label for="password">Contraseña<input id="password" data-testid="password" type="password" autocomplete="current-password" required></label>
+          <button id="login-submit" data-testid="login" class="primary" type="submit">Entrar</button>
+          <p class="hint">Si necesitas recuperar tu acceso, solicita un enlace a coordinación.</p>
+        </form>
+      </section>
+      <section id="invite-start" hidden aria-labelledby="invite-title">
+        <p class="eyebrow">PRIMER ACCESO</p><h2 id="invite-title">Lista para comenzar</h2>
+        <p>Verifica tu invitación para crear tu contraseña. Después configurarás el segundo factor de tu cuenta.</p>
+        <p class="hint">Continúa únicamente si solicitaste este acceso. El enlace es personal.</p>
+        <form id="invite-verify-form"><label for="invite-email">Correo de tu invitación<input id="invite-email" data-testid="invite-email" type="email" autocomplete="username" maxlength="254" required></label>
+        <button id="invite-continue" data-testid="invite-continue" type="submit" class="primary">Continuar con mi invitación</button></form>
+        <button id="invite-cancel" data-testid="invite-cancel" type="button" class="secondary">Volver al inicio de sesión</button>
+      </section>
+      <section id="invite-error" hidden aria-labelledby="invite-error-title">
+        <h2 id="invite-error-title">Revisa tu acceso</h2>
+        <p>No podemos confirmar este primer acceso. Si ya creaste tu contraseña, intenta entrar. Si todavía no puedes, pide a coordinación que revise tu invitación.</p>
+        <button id="invite-error-login" data-testid="invite-error-login" type="button" class="primary">Ir al inicio de sesión</button>
+      </section>
+      <section id="invite-password" hidden aria-labelledby="invite-password-title">
+        <p class="eyebrow">TU CUENTA</p><h2 id="invite-password-title">Crea tu contraseña</h2>
+        <p id="invite-identity" data-testid="invite-identity" class="hint"></p>
+        <form id="invite-password-form">
+          <label for="invite-new-password">Nueva contraseña<input id="invite-new-password" data-testid="invite-new-password" type="password" autocomplete="new-password" minlength="12" maxlength="128" aria-describedby="invite-password-hint" required></label>
+          <p id="invite-password-hint" class="hint">Usa al menos 12 caracteres; si es muy larga, acórtala. Elige una diferente a la de otros servicios.</p>
+          <label for="invite-confirm-password">Confirma tu contraseña<input id="invite-confirm-password" data-testid="invite-confirm-password" type="password" autocomplete="new-password" minlength="12" maxlength="128" required></label>
+          <button id="invite-save-password" data-testid="invite-save-password" type="submit" class="primary">Guardar contraseña y volver a entrar</button>
+        </form>
+        <button id="invite-password-cancel" data-testid="invite-password-cancel" type="button" class="secondary">Cancelar y cerrar este acceso</button>
+      </section>
+      <section id="recover-start" hidden aria-labelledby="recover-title">
+        <p class="eyebrow">RECUPERAR ACCESO</p><h2 id="recover-title">Vuelve a entrar a tu cuenta</h2>
+        <p>Usa el enlace que te envió coordinación. Confirma tu correo para continuar. Si tienes un autenticador, necesitarás el que ya configuraste.</p>
+        <form id="recover-verify-form"><label for="recover-email">Correo de tu cuenta<input id="recover-email" data-testid="recover-email" type="email" autocomplete="username" maxlength="254" required></label>
+        <button id="recover-continue" data-testid="recover-continue" type="submit" class="primary">Continuar con mi recuperación</button></form>
+        <button id="recover-cancel" data-testid="recover-cancel" type="button" class="secondary">Cancelar y volver al inicio</button>
+      </section>
+      <section id="recover-factor" hidden aria-labelledby="recover-factor-title">
+        <p class="eyebrow">VERIFICA TU IDENTIDAD</p><h2 id="recover-factor-title">Usa tu autenticador actual</h2>
+        <p id="recover-factor-identity" data-testid="recover-factor-identity" class="hint"></p>
+        <p>Escribe el código de la aplicación que ya configuraste. No se creará ni eliminará un autenticador.</p>
+        <form id="recover-factor-form"><label for="recover-factor-select">Aplicación autenticadora<select id="recover-factor-select" data-testid="recover-factor"></select></label>
+        <label for="recover-code">Código de seis dígitos<input id="recover-code" data-testid="recover-code" type="text" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" maxlength="6" required></label>
+        <button id="recover-verify-factor" data-testid="recover-verify" type="submit" class="primary">Verificar mi autenticador</button></form>
+        <button id="recover-lost-factor" data-testid="recover-lost-factor" type="button" class="secondary">Ya no tengo ese autenticador</button>
+        <button id="recover-factor-cancel" data-testid="recover-factor-cancel" type="button" class="secondary">Cancelar recuperación</button>
+      </section>
+      <section id="recover-password" hidden aria-labelledby="recover-password-title">
+        <p class="eyebrow">NUEVA CONTRASEÑA</p><h2 id="recover-password-title">Elige tu nueva contraseña</h2>
+        <p id="recover-identity" data-testid="recover-identity" class="hint"></p>
+        <form id="recover-password-form">
+          <label for="recover-new-password">Nueva contraseña<input id="recover-new-password" data-testid="recover-new-password" type="password" autocomplete="new-password" minlength="12" maxlength="128" aria-describedby="recover-password-hint" required></label>
+          <p id="recover-password-hint" class="hint">Usa al menos 12 caracteres; si es muy larga, acórtala. Elige una diferente a la de otros servicios.</p>
+          <label for="recover-confirm-password">Confirma tu nueva contraseña<input id="recover-confirm-password" data-testid="recover-confirm-password" type="password" autocomplete="new-password" minlength="12" maxlength="128" required></label>
+          <button id="recover-save-password" data-testid="recover-save-password" type="submit" class="primary">Guardar contraseña y cerrar las sesiones</button>
+        </form>
+        <button id="recover-password-cancel" data-testid="recover-password-cancel" type="button" class="secondary">Cancelar recuperación</button>
+      </section>
+      <section id="recover-error" hidden aria-labelledby="recover-error-title">
+        <h2 id="recover-error-title">Coordina la recuperación de tu acceso</h2>
+        <p>Si perdiste tu autenticador o no puedes continuar, pide revisión a coordinación. Este portal no elimina el segundo factor ni crea otra cuenta para omitirlo.</p>
+        <p>Si ya cambiaste tu contraseña, intenta entrar con ella; si el cierre no se confirmó, cierra esta pestaña antes de continuar.</p>
+        <button id="recover-error-login" data-testid="recover-error-login" type="button" class="primary">Ir al inicio de sesión</button>
+      </section>
+      <section id="enroll" hidden><h2>Configura tu segundo factor</h2><p>Usa tu aplicación autenticadora para proteger el acceso.</p><button id="start-enroll" type="button" class="primary">Configurar autenticador</button></section>
+      <section id="resume" hidden><h2>Configuración pendiente</h2><p>Continúa con el autenticador que ya escaneaste. No se creará otro factor.</p><button id="resume-factor" type="button" class="primary">Continuar con mi autenticador</button><p>Si no conservas esa configuración, solicita revisión de acceso. No se eliminan factores desde este portal.</p></section>
+      <section id="verify" hidden>
+        <h2>Verifica tu segundo factor</h2><p>Escribe el código de tu aplicación. No compartas esta pantalla.</p>
+        <img id="qr" alt="QR privado para tu aplicación autenticadora" hidden>
+        <details id="manual-secret" hidden><summary>Clave para configuración manual</summary><code id="secret"></code></details>
+        <form id="verify-form"><label id="factors-label" for="factors" hidden>Aplicación autenticadora<select id="factors"></select></label><label for="code">Código de seis dígitos<input id="code" data-testid="code" type="text" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" maxlength="6" required></label><button id="verify-submit" data-testid="verify" class="primary" type="submit">Verificar código</button></form>
+      </section>
+    </section>
+    <section id="ready" hidden aria-label="Accesos y proyectos autorizados"><div id="workspace"></div></section>
+  </main>
+  <script src="config.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

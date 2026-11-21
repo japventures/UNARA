@@ -1,0 +1,186 @@
+/* Shared presentation for public synthetic drawers and authenticated step detail. */
+.step-guide {
+  --guide-ink: #203748;
+  --guide-muted: #536473;
+  --guide-navy: #183349;
+  --guide-border: #dfe6ec;
+  --guide-blue: #225d83;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  width: 100%;
+  min-width: 0;
+  margin: 20px 0 4px;
+  color: var(--guide-ink);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: left;
+}
+.step-guide,
+.step-guide * { box-sizing: border-box; }
+.step-guide > section {
+  grid-column: 1 / -1;
+  min-width: 0;
+  margin: 0;
+  padding: 18px;
+  border: 1px solid var(--guide-border);
+  border-radius: 8px;
+  background: #fff;
+  overflow-wrap: anywhere;
+}
+.step-guide > .guide-client,
+.step-guide > .guide-team { grid-column: auto; }
+.step-guide > .guide-goal { border-color: #cbdbe6; background: #eef4f8; }
+.step-guide > .guide-next { background: #f6f8fa; }
+.step-guide h3 {
+  margin: 0 0 8px;
+  color: var(--guide-navy);
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.45;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
+}
+.step-guide > section > p {
+  min-width: 0;
+  margin: 0;
+  color: var(--guide-ink);
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.step-guide .guide-goal > p { font-weight: 500; }
+.step-guide .guide-next > p { font-size: 15px; }
+.step-guide .guide-request > .guide-system { font-weight: 650; color: var(--guide-navy); margin-bottom: 5px; }
+.step-guide .guide-request > .guide-location-status { margin-top: 10px; padding: 8px 10px; border: 1px solid var(--guide-border); border-radius: 5px; background: #f4f7fa; color: var(--guide-muted); font-size: 13px; }
+.step-guide .guide-tutorial { margin-top: 13px; border: 1px solid var(--guide-border); border-radius: 6px; background: #fff; min-width: 0; }
+.step-guide .guide-tutorial > summary { display: list-item; min-height: 44px; margin: 0; padding: 11px 13px; color: var(--guide-navy); font-size: 14px; font-weight: 550; line-height: 1.6; list-style: disclosure-closed inside; cursor: pointer; touch-action: manipulation; overflow-wrap: anywhere; }
+.step-guide .guide-tutorial > summary::before { content: none; }
+.step-guide .guide-tutorial > summary::marker { color: var(--guide-blue); }
+.step-guide .guide-tutorial > summary:hover { background: #f2f6f9; }
+.step-guide .guide-tutorial[open] > summary { background: #f2f6f9; list-style-type: disclosure-open; }
+.step-guide .guide-tutorial-body { padding: 0 13px 13px; color: var(--guide-ink); font-size: 14px; line-height: 1.65; overflow-wrap: anywhere; }
+.step-guide .guide-tutorial-body h4 { margin: 12px 0 8px; color: var(--guide-navy); font-size: 14px; line-height: 1.5; }
+.step-guide .guide-tutorial-steps { margin: 12px 0 0; padding-left: 21px; }
+.step-guide .guide-tutorial-steps li { padding: 3px 0; color: var(--guide-ink); }
+.step-guide .guide-tutorial-completion { margin: 12px 0 0; padding-top: 10px; border-top: 1px solid var(--guide-border); color: var(--guide-ink); font-size: 14px; }
+.step-guide .guide-tutorial-help { margin: 9px 0 0; color: var(--guide-muted); font-size: 13px; }
+.step-guide .subtext {
+  margin: 12px 0 0;
+  color: var(--guide-muted);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.step-guide :is(.guide-request, .guide-faq) button.secondary {
+  display: inline-flex;
+  width: auto;
+  max-width: 100%;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 14px 0 0;
+  padding: 10px 15px;
+  border: 1px solid #8da3b4;
+  border-radius: 6px;
+  background: #fff;
+  color: var(--guide-blue);
+  font: 600 14px/1.5 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  text-align: center;
+  text-decoration: none;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+  touch-action: manipulation;
+  opacity: 1;
+  transition: background-color 120ms ease, border-color 120ms ease;
+}
+.step-guide :is(.guide-request, .guide-faq) button.secondary:hover:not(:disabled) {
+  border-color: #617f96;
+  background: #eaf2f7;
+  color: #173f5e;
+}
+.step-guide :is(.guide-request, .guide-faq) button.secondary:active:not(:disabled) { background: #deebf4; }
+.step-guide :is(.guide-request, .guide-faq) button.secondary:disabled {
+  border-color: #c5d0d9;
+  background: #e9eef2;
+  color: #536473;
+  cursor: not-allowed;
+  opacity: 1;
+}
+.step-guide .guide-feedback:empty { display: none; }
+.step-guide .guide-feedback:not(:empty) {
+  margin: 12px 0 0;
+  padding: 11px 12px;
+  border: 1px solid #dfbfc4;
+  border-radius: 6px;
+  background: #faedef;
+  color: #84353b;
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.step-guide .guide-faq > h3 { margin-bottom: 12px; }
+.step-guide .guide-question {
+  min-width: 0;
+  margin: 0;
+  border: 1px solid var(--guide-border);
+  border-radius: 6px;
+  background: #fff;
+}
+.step-guide .guide-question + .guide-question { margin-top: 9px; }
+.step-guide .guide-question > summary {
+  display: list-item;
+  min-height: 44px;
+  margin: 0;
+  padding: 11px 13px;
+  border-radius: 5px;
+  color: var(--guide-navy);
+  font-size: 14px;
+  font-weight: 550;
+  line-height: 1.6;
+  list-style: disclosure-closed inside;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.step-guide .guide-question > summary::marker { color: var(--guide-blue); }
+.step-guide .guide-question > summary::before { content: none; }
+.step-guide .guide-question > summary:hover { background: #f2f6f9; }
+.step-guide .guide-question[open] > summary { background: #f2f6f9; border-radius: 5px 5px 0 0; list-style-type: disclosure-open; }
+.step-guide .guide-question > p {
+  margin: 0 13px 13px;
+  padding-top: 12px;
+  border-top: 1px solid var(--guide-border);
+  color: var(--guide-ink);
+  font-size: 15px;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+.step-guide :is(button, summary):focus-visible { outline: 3px solid #07699e; outline-offset: 3px; }
+.step-guide [hidden] { display: none !important; }
+@media (max-width: 600px) {
+  .step-guide { grid-template-columns: minmax(0, 1fr); gap: 12px; margin-top: 16px; }
+  .step-guide > section { padding: 16px; }
+  .step-guide > .guide-client,
+  .step-guide > .guide-team { grid-column: 1 / -1; }
+}
+@media (max-width: 380px) {
+  .step-guide :is(.guide-request, .guide-faq) button.secondary { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .step-guide,
+  .step-guide * { scroll-behavior: auto; animation: none; transition: none; }
+}
+@media (forced-colors: active) {
+  .step-guide > section,
+  .step-guide .guide-question,
+  .step-guide .guide-tutorial,
+  .step-guide .guide-location-status { border-color: CanvasText; }
+  .step-guide :is(.guide-request, .guide-faq) button.secondary { border-color: ButtonText; background: Canvas; color: ButtonText; }
+  .step-guide :is(.guide-request, .guide-faq) button.secondary:disabled { border-color: GrayText; color: GrayText; }
+}

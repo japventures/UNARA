@@ -1,0 +1,1 @@
+window.UNARA_RECOVERY_REVIEW_CONFIG={"enabled":false,"portalEnabled":false,"internalPilotEnabled":false,"accessManagementEnabled":false,"clientViewEnabled":false,"documentsEnabled":false,"recoveryEnabled":false,"inviteEnabled":false,"userDirectoryEnabled":false,"notificationsEnabled":false,"providersEnabled":false,"localReview":false,"publishableKey":""};
