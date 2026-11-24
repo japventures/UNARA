@@ -1,3 +1,4 @@
+import {createOwnerPreviewUI} from './owner-preview-ui.js?v=experience-024';
 const ENDPOINT='https://vgksadeprdrrvllknqul.supabase.co/functions/v1/unara-owner-synthetic-preview';
 const ISSUER='https://vgksadeprdrrvllknqul.supabase.co/auth/v1';
 const ORIGIN='https://unara.mx';
@@ -24,17 +25,16 @@ export function validateOwnerPreview(value,id,view){
 }
 export function mountOwnerSyntheticPreview({root,client,subject,isActive,revalidate,publishableKey,fetcher=globalThis.fetch.bind(globalThis),origin=location.origin,doc=document,now=Date.now}){
  const element=(tag,text)=>{const n=doc.createElement(tag);if(text!==undefined)n.textContent=text;return n;};
- const panel=element('section');panel.className='auth-card';panel.dataset.testid='owner-synthetic-preview';
- const title=element('h1','Piloto privado · Solo lectura');
- const notice=element('p','SIMULACIÓN. No son proyectos ni permisos reales; solo esta sesión de propietario puede alternar las vistas.');
- const nav=element('div');nav.hidden=true; const status=element('p','Verificando acceso…');status.setAttribute('role','status');status.setAttribute('aria-live','polite');
- const details=element('div');details.dataset.testid='synthetic-preview-result';
- panel.append(title,notice,nav,status,details);root.append(panel);
- let disposed=false,version=0,pending=null;
+ const panel=element('section');panel.className='owner-preview-v24';panel.dataset.testid='owner-synthetic-preview';
+ const status=element('p','Verificando acceso…');status.className='owner-preview-status';status.setAttribute('role','status');status.setAttribute('aria-live','polite');status.setAttribute('aria-atomic','true');
+ root.append(panel);
+ let disposed=false,version=0,pending=null,ui=null,selection={id:'amssi',view:'admin'};
  const active=n=>!disposed&&n===version&&isActive();
- function clear(){++version;pending?.abort();pending=null;details.replaceChildren();return version}
- function dispose(){if(disposed)return;disposed=true;clear();status.textContent='';panel.remove()}
+ function clear(){++version;pending?.abort();pending=null;ui?.loading(selection);return version}
+ function dispose(){if(disposed)return;disposed=true;clear();ui?.dispose();status.textContent='';panel.remove()}
  if(origin!==ORIGIN||!subject||typeof publishableKey!=='string'||!publishableKey.startsWith('sb_publishable_')||!isActive()){dispose();return{dispose};}
+ ui=createOwnerPreviewUI({root:panel,doc,options:OPTIONS,onOpen:(id,view)=>{void open(id,view)},isActive:()=>!disposed&&isActive()});
+ panel.append(status);
  async function verifiedToken(){
    if(!await revalidate())throw Error('DENIED');
    const s=await client.auth.getSession(), session=s.data?.session;
@@ -45,6 +45,7 @@ export function mountOwnerSyntheticPreview({root,client,subject,isActive,revalid
  }
  async function open(id,view){
    if(!allowed(id,view)||!isActive()){dispose();return;}
+   selection={id,view};
    const n=clear(), request=new AbortController();pending=request;status.textContent='Verificando acceso…';
    try{
       const token=await verifiedToken();if(!active(n))return;
@@ -56,19 +57,11 @@ export function mountOwnerSyntheticPreview({root,client,subject,isActive,revalid
       const finalToken=await verifiedToken();
       if(!active(n))return;
       if(finalToken!==token)throw Error('DENIED');
-      const heading=element('h2',data.name),stage=element('p','Etapa simulada: '+data.stage),role=element('p',view==='admin'?'Vista administrativa · solo consulta':'Vista de cliente simulada · solo consulta');
-      const progress=element('p','Progreso simulado: '+data.progress+' %');
-      const meter=element('progress');meter.max=100;meter.value=data.progress;meter.setAttribute('aria-label','Progreso simulado');
-      const next=element('p','Siguiente paso simulado: '+data.nextStep);
-      const statusLabels={'pending':'Pendiente','in-progress':'En curso','done':'Completado'};
-      function section(label,items,key){const block=element('section'),list=element('ul');block.append(element('h3',label));for(const item of items)list.append(element('li',item[key]+' · '+statusLabels[item.status]));block.append(list);return block;}
-      details.replaceChildren(role,heading,stage,progress,meter,next,section('Etapas',data.stages,'name'),section('Tareas',data.tasks,'label'),section('Documentos simulados · sin descarga',data.documents,'label'));
-      if(view==='admin'&&Object.hasOwn(data,'internalNote'))details.append(element('p','Nota interna simulada: '+data.internalNote));
-      nav.hidden=false;status.textContent='Simulación verificada. No se guardaron cambios.';
-   }catch{if(active(n)){details.replaceChildren();nav.hidden=true;status.textContent='No se pudo verificar el acceso al piloto. No se mostraron datos.';}}
+      ui.show({data,id,view});
+      status.textContent='Simulación verificada · solo lectura. No se guardaron cambios.';
+   }catch{if(active(n)){ui.error();status.textContent='No se pudo verificar el acceso al piloto. No se mostraron datos.';}}
    finally{if(pending===request)pending=null;}
  }
- for(const [id,view,label] of OPTIONS){const b=element('button',label);b.type='button';b.className='secondary';b.addEventListener('click',()=>{void open(id,view)});nav.append(b);}
  void open('amssi','admin');
  return{dispose};
 }
