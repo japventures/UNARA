@@ -55,6 +55,106 @@
 .overview-legend i.none{background:#fff;border:1px dashed #c9d4d9}
 .overview-note{margin-top:9px;font-size:10px;line-height:1.45;color:#778b99}
 @media(max-width:700px){.overview{margin:18px 0 24px}.overview-header{padding:16px 15px 13px;gap:8px;flex-wrap:wrap}.overview-header h2{font-size:24px}.overview-header p:not(.section-label){font-size:12px}.overview-kicker{font-size:9px}.overview-table{min-width:710px}.overview-axis,.overview-row{grid-template-columns:157px minmax(0,1fr) 74px}.overview-axis-label,.overview-axis-value{padding:0 8px;font-size:9px}.overview-name{padding:8px 9px;gap:6px}.overview-icon{width:25px;height:23px;flex-basis:25px}.overview-copy strong{font-size:10px}.overview-copy small{font-size:9px}.overview-row{min-height:59px}.overview-name,.overview-axis-label{position:sticky;left:0;z-index:1;background:#fff;border-right:1px solid #e1e7e9}.overview-row[aria-pressed=true] .overview-name{background:var(--tint)}.overview-axis-label{background:#f8faf9}.overview-pct{padding:8px}.overview-pct strong{font-size:13px}.overview-pct small{font-size:8px}.overview-footer{padding:12px 15px}.overview-note{font-size:10px}}
+
+/* Densidad ejecutiva: menos altura, misma información. */
+header{min-height:58px}
+.wrap{padding-top:16px;padding-bottom:26px}
+.sample{margin-bottom:12px}
+.hero{padding-bottom:12px;margin-bottom:12px}
+.hero h1{font-size:clamp(28px,3.4vw,43px);margin-bottom:4px;line-height:1.04}
+.hero p{font-size:12px;line-height:1.35}
+.hero .overline{margin-bottom:4px}
+.hero-stats{gap:12px}
+.hero-stat{padding-left:12px}
+.hero-stat strong{font-size:28px}
+.hero-stat span{margin-top:2px}
+.overview{margin:12px 0 18px}
+.overview-header{padding:10px 14px 9px;align-items:center;gap:12px}
+.overview-header .section-label{display:none}
+.overview-header h2{font-size:23px;line-height:1.13;margin:0 0 3px}
+.overview-header p:not(.section-label){font-size:11px;line-height:1.25;max-width:none}
+.overview-kicker{padding:3px 7px;font-size:9px;letter-spacing:.03em}
+.overview-axis,.overview-row{grid-template-columns:213px minmax(0,1fr) 84px}
+.overview-axis{min-height:30px}
+.overview-axis-label,.overview-axis-value{padding:0 11px;font-size:9px}
+.overview-phases span{font-size:10px;line-height:1.15;padding:4px 2px}
+.overview-phases small{display:none}
+.overview-row{min-height:36px}
+.overview-name{gap:8px;padding:4px 9px 4px 10px}
+.overview-icon{width:35px;height:22px;flex:0 0 35px}
+.overview-row[data-company=legal] .overview-icon{background:#244bc0;padding:2px 3px;border-radius:3px;mix-blend-mode:normal}
+.overview-copy{gap:0}
+.overview-copy strong{font-size:11px;line-height:1.22;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.overview-copy small{font-size:9px;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.overview-grid{padding:3px 0}
+.overview-track{height:11px;border-radius:3px}
+.overview-fill{border-radius:2px 0 0 2px}
+.overview-pct{padding:3px 11px 3px 4px;gap:0}
+.overview-pct strong{font-size:13px;line-height:1.13}
+.overview-pct small{font-size:8px;line-height:1.1}
+.overview-footer{padding:7px 14px 8px}
+.overview-legend{gap:5px 15px;font-size:10px;line-height:1.2}
+.overview-legend span{gap:5px}
+.overview-legend i{width:18px;height:7px}
+.overview-note{margin-top:4px;font-size:9px;line-height:1.3}
+.section-head{margin-bottom:6px}
+.section-head h2{font-size:17px}
+.section-head p{font-size:11px;margin-top:1px}
+.folders{margin-bottom:10px;gap:6px;padding-bottom:4px}
+.folder{min-height:43px;padding:5px 8px;gap:6px}
+.folder img{width:43px;height:25px}
+.grid{gap:12px}
+.exec-head{padding-top:12px;padding-bottom:12px}
+.row{min-height:39px;padding-top:6px;padding-bottom:6px}
+.lane-heading{padding-top:5px;padding-bottom:5px}
+.detail{padding-top:12px;padding-bottom:13px}
+.detail-brand{margin-bottom:10px}
+.detail h3{font-size:22px;margin-bottom:8px}
+.detail-progress{margin:6px 0 4px}
+.detail-progress strong{font-size:26px}
+.journey{margin-top:12px;padding:15px 18px 13px}
+.journey-head h2{font-size:22px}
+.journey-track{padding:12px 0 7px}
+.stage-legend{padding-bottom:9px}
+.journey-list{margin-top:7px;gap:0 20px}
+.journey-list li{padding:6px 0;min-height:37px}
+.journey-note{margin-top:8px}
+.next-feed{margin-top:16px}
+.feed-row{min-height:41px;padding-top:6px;padding-bottom:6px}
+@media(max-width:1000px){.overview-table{min-width:710px}.overview-axis,.overview-row{grid-template-columns:196px minmax(0,1fr) 73px}}
+@media(max-width:700px){
+ header{min-height:52px}
+ .wrap{padding-top:10px}
+ .hero{padding-bottom:9px;margin-bottom:9px}
+ .hero h1{font-size:30px}
+ .hero-stats{margin-top:9px}
+ .hero-stat strong{font-size:23px}
+ .hero-stat{padding-left:0}
+ .sample{margin-bottom:9px}
+ .overview{margin:10px 0 14px}
+ .overview-header{padding:9px 10px;gap:5px}
+ .overview-header h2{font-size:21px}
+ .overview-header p:not(.section-label){font-size:10px}
+ .overview-kicker{font-size:8px}
+ .overview-table{min-width:658px}
+ .overview-axis,.overview-row{grid-template-columns:147px minmax(0,1fr) 67px}
+ .overview-row{min-height:44px}
+ .overview-name{gap:5px;padding:5px 6px}
+ .overview-icon{width:28px;height:19px;flex-basis:28px}
+ .overview-copy strong{white-space:normal;overflow-wrap:anywhere;font-size:10px}
+ .overview-copy small{font-size:8px}
+ .overview-axis-label,.overview-axis-value{padding:0 6px}
+ .overview-track{height:10px}
+ .overview-pct{padding:5px}
+ .overview-pct strong{font-size:12px}
+ .overview-footer{padding:7px 10px}
+ .overview-note{font-size:9px}
+ .grid{gap:10px}
+ .row{min-height:44px}
+ .journey{padding:12px 12px 10px;margin-top:10px}
+ .journey-list li{min-height:44px}
+ .feed-row{min-height:50px}
+}
 </style>
 </head>
 <body>
@@ -64,14 +164,14 @@
 <div class="hero"><div><p class="overline">EXPEDIENTE · PROYECTO HORIZONTE</p><h1>El panorama de tu inversión.</h1><p>Una lectura clara de cómo avanza cada especialista y qué sigue en el recorrido.</p></div><div class="hero-stats" aria-label="Alcance de la muestra"><div class="hero-stat"><strong>05</strong><span>EMPRESAS</span></div><div class="hero-stat"><strong>06</strong><span>PROCESOS</span></div></div></div>
 
 <section class="overview" aria-labelledby="overview-title">
- <div class="overview-header"><div><p class="section-label">VISTA GENERAL DEL EXPEDIENTE</p><h2 id="overview-title">El recorrido completo.</h2><p>Los servicios comparten una sola línea de tiempo conceptual: algunos comienzan al inicio, otros se suman durante la preparación y continúan en paralelo hasta la entrega.</p></div><span class="overview-kicker">06 PROCESOS · 05 EMPRESAS</span></div>
+ <div class="overview-header"><div><p class="section-label">VISTA GENERAL DEL EXPEDIENTE</p><h2 id="overview-title">El recorrido completo.</h2><p>Seis servicios en una misma secuencia de participación orientativa.</p></div><span class="overview-kicker">06 PROCESOS · 05 EMPRESAS</span></div>
  <div class="overview-scroll" tabindex="0" role="region" aria-label="Gantt general, desplázate horizontalmente para ver todas las fases">
   <div class="overview-table">
    <div class="overview-axis"><span class="overview-axis-label">Servicio / empresa</span><div class="overview-phases" aria-label="Fases orientativas"><span>Inicio<small>01</small></span><span>Estructuración<small>02</small></span><span>Preparación<small>03</small></span><span>Ejecución<small>04</small></span><span>Cierre / entrega<small>05</small></span></div><span class="overview-axis-value">Avance</span></div>
    <div id="overview-rows"></div>
   </div>
  </div>
- <div class="overview-footer"><div class="overview-legend"><span><i></i> Avance reportado (muestra)</span><span><i class="outline"></i> Tramo de participación restante</span><span><i class="none"></i> Fuera del tramo</span><span>Selecciona un servicio para explorar sus etapas ↓</span></div><p class="overview-note">Secuencia de participación orientativa, no un calendario ni fechas comprometidas. El color identifica a cada empresa; el ancho del tramo no expresa duración real. Las dos modalidades Northreach pueden activarse según el expediente; no es obligatorio contratar ambas.</p></div>
+ <div class="overview-footer"><div class="overview-legend"><span><i></i> Avance reportado</span><span><i class="outline"></i> Pendiente</span><span><i class="none"></i> Fuera del tramo</span><span>Selecciona una línea para ver etapas ↓</span></div><p class="overview-note">Tramos ilustrativos: no representan fechas ni duraciones reales. Modalidades Northreach según expediente; no es obligatorio contratar ambas.</p></div>
 </section>
 <section aria-labelledby="folder-title"><div class="section-head"><div><h2 id="folder-title">Carpetas del expediente</h2><p>Identidad de empresa, procesos y lectura individual.</p></div><span class="section-label">Explorar</span></div><div id="folders" class="folders"></div></section>
 <div class="grid"><section class="execution" aria-labelledby="execution-title"><div class="exec-head"><div><h2 id="execution-title">Mapa de ejecución</h2><p id="map-caption">Avances por empresa · en paralelo</p></div><label><span class="section-label" style="position:absolute;clip-path:inset(50%);">Ordenar procesos</span><select id="sort" class="order" aria-label="Ordenar procesos"><option value="company">Por empresa</option><option value="progress">Por avance</option></select></label></div><div class="axis"><span>PROCESO</span><div class="axis-labels"><span>Inicio</span><span>25%</span><span>50%</span><span>75%</span><span>Cierre</span></div><span>AVANCE</span></div><div id="rows"></div><div class="axis-note"><span><b>Lectura:</b> una línea por proceso, sin promedio general.</span><span>Escala relativa · no calendario.</span></div></section>
