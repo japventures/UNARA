@@ -1,4 +1,4 @@
-import {createOwnerPreviewUI} from './owner-preview-35.js?v=pilot-35-2';
+import {createOwnerPreviewUI} from './owner-preview-369.js?v=3.6.9-r1';
 const ENDPOINT='https://vgksadeprdrrvllknqul.supabase.co/functions/v1/unara-owner-synthetic-preview';
 const ISSUER='https://vgksadeprdrrvllknqul.supabase.co/auth/v1';
 const ORIGIN='https://unara.mx';
