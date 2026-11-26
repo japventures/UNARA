@@ -1,7 +1,7 @@
 // Compatibility dispatcher appended to the existing post-MFA entry module.
 // The historical ownerSyntheticPreviewEnabled flag keeps the existing Auth
 // entry reachable; it does not grant owner rights. Server authority is mandatory.
-import {mountOwnerSyntheticPreview as mountOwnerSyntheticPreviewLegacy} from './owner-synthetic-preview.js?v=owner-preview-021';
+import {mountOwnerSyntheticPreview as mountOwnerSyntheticPreviewLegacy} from './owner-synthetic-preview.js?v=owner-preview-35-1';
 export function mountOwnerSyntheticPreview(options){
  if(globalThis.window?.UNARA_RECOVERY_REVIEW_CONFIG?.operationalAdminEnabled!==true)
   return mountOwnerSyntheticPreviewLegacy(options);

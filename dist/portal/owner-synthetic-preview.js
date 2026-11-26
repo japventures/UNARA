@@ -1,4 +1,4 @@
-import {createOwnerPreviewUI} from './owner-preview-ui.js?v=experience-024';
+import {createOwnerPreviewUI} from './owner-preview-35.js?v=pilot-35-1';
 const ENDPOINT='https://vgksadeprdrrvllknqul.supabase.co/functions/v1/unara-owner-synthetic-preview';
 const ISSUER='https://vgksadeprdrrvllknqul.supabase.co/auth/v1';
 const ORIGIN='https://unara.mx';
@@ -25,7 +25,7 @@ export function validateOwnerPreview(value,id,view){
 }
 export function mountOwnerSyntheticPreview({root,client,subject,isActive,revalidate,publishableKey,fetcher=globalThis.fetch.bind(globalThis),origin=location.origin,doc=document,now=Date.now}){
  const element=(tag,text)=>{const n=doc.createElement(tag);if(text!==undefined)n.textContent=text;return n;};
- const panel=element('section');panel.className='owner-preview-v24';panel.dataset.testid='owner-synthetic-preview';
+ const panel=element('section');panel.className='owner-preview-v35';panel.dataset.testid='owner-synthetic-preview';
  const status=element('p','Verificando acceso…');status.className='owner-preview-status';status.setAttribute('role','status');status.setAttribute('aria-live','polite');status.setAttribute('aria-atomic','true');
  root.append(panel);
  let disposed=false,version=0,pending=null,ui=null,selection={id:'amssi',view:'admin'};
@@ -58,7 +58,7 @@ export function mountOwnerSyntheticPreview({root,client,subject,isActive,revalid
       if(!active(n))return;
       if(finalToken!==token)throw Error('DENIED');
       ui.show({data,id,view});
-      status.textContent='Simulación verificada · solo lectura. No se guardaron cambios.';
+      status.textContent='Sesión verificada · piloto privado 3.5. No se guardaron cambios reales.';
    }catch{if(active(n)){ui.error();status.textContent='No se pudo verificar el acceso al piloto. No se mostraron datos.';}}
    finally{if(pending===request)pending=null;}
  }
