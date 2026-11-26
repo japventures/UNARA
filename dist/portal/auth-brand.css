@@ -1,0 +1,21 @@
+/* Identidad UNARA para la pantalla de acceso; sin cambios en la autenticación. */
+@font-face{font-family:"DM Sans";src:url("/portal/assets/brand/dm-sans.ttf") format("truetype");font-weight:100 1000;font-style:normal;font-display:swap}
+@font-face{font-family:"DM Serif Display";src:url("/portal/assets/brand/dm-serif-display.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+body{background:#e7e5de;color:#102832;font-family:"DM Sans",Arial,sans-serif;font-optical-sizing:auto}
+body>header{background:#102832;color:#f4f1e9;border-bottom:1px solid #30464d;min-height:67px;padding:15px max(28px,3vw)}
+body>header .wordmark{display:inline-flex;align-items:center;gap:10px;color:#f4f1e9;font-family:"DM Sans",Arial,sans-serif;font-size:26px;font-weight:700;letter-spacing:.14em;line-height:1}
+body>header .auth-mark{display:block;width:30px;height:30px;object-fit:contain;flex:none}
+body>header>p{color:#d2d8da;font-size:13px}
+body>header>.light{background:#1f363e;border:1px solid #c6a77e;color:#f4f1e9}
+#access.auth-card{background:#f4f1e9;border:1px solid #c9cbc4;border-radius:10px;padding:30px;box-shadow:0 4px 18px #1028320b;max-width:480px}
+#access h1,#access h2{color:#102832;font-family:"DM Serif Display",Georgia,serif;font-weight:400;letter-spacing:-.02em}
+#access h1{font-size:36px;line-height:1.08}
+#access .eyebrow{color:#856235;letter-spacing:.11em}
+#access label{color:#3d5965}
+#access .hint,#access .status{color:#53666d}
+#access input,#access textarea,#access select{border-color:#b8c1c3;background:#fffdf8;color:#102832}
+#access .primary{background:#102832;color:#f4f1e9;border-color:#102832}
+#access .primary:hover{background:#3d5965}
+#access .secondary{background:#e7e5de;color:#102832;border-color:#b8c1c3}
+body>header button:focus-visible,#access button:focus-visible,#access input:focus-visible,#access select:focus-visible{outline:3px solid #a68157;outline-offset:2px}
+@media(max-width:600px){body>header{padding:13px 15px;gap:12px;min-height:57px}body>header .wordmark{font-size:22px;gap:7px}body>header .auth-mark{width:25px;height:25px}body>header>p{font-size:11px}#access.auth-card{padding:22px;margin:15px auto}#access h1{font-size:31px}}
