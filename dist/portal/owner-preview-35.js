@@ -91,14 +91,14 @@ export function createOwnerPreviewUI({root,doc=document,isActive}){
  function show({data}={}){
   clear();if(!allowed()||data?.simulation!==true)return;
   const css=E('link');css.rel='stylesheet';css.href='/portal/owner-preview-35.css?v=pilot-35-2';
-  const shell=E('div',null,'wrap'),head=E('div',null,'pilot-head'),headText=E('div');headText.append(E('span','PILOTO PRIVADO · 3.5','chip'),E('p','Sesión verificada · vista sintética de UNARA','muted'));
+  const shell=E('div',null,'wrap'),head=E('div',null,'pilot-head'),headText=E('div');headText.append(E('span','PILOTO PRIVADO · 3.5.2','chip'),E('p','Sesión verificada · vista sintética de UNARA','muted'));
   const toggles=E('div',null,'switch');toggles.setAttribute('role','group');toggles.setAttribute('aria-label','Vistas de demostración');toggles.append(button('view-client','Inversionista'),button('view-admin','Admin'));head.append(headText,toggles);
   const demo=E('div',null,'demo');demo.append(E('span','MODO DE DEMOSTRACIÓN','chip'),E('span','Datos ficticios. Los roles y cambios son simulados, sin guardar expedientes, enviar invitaciones ni modificar permisos reales.'));
   const workspace=E('section',null,'workspace'),left=E('div');left.append(E('p','EXPEDIENTE DE INVERSIÓN','kicker'),id('h1','workspace-title',null,'El expediente de tu inversión.'),id('p','workspace-details','muted'));
   const right=E('div',null,'workspace-controls'),project=E('label',null,'field');project.append(E('span','Proyecto de muestra'),id('select','project'));
   const roleWrap=id('label','role-wrap','field');roleWrap.hidden=true;const role=id('select','role');for(const [v,n] of [['super','Superadmin'],['operations','Operaciones'],['legal','Equipo LegalKey']]){const op=E('option',n);op.value=v;role.append(op);}roleWrap.append(E('span','Simular rol'),role);right.append(project,roleWrap,id('span','project-status','chip ok'));workspace.append(left,right);
   const nav=id('nav','admin-nav','admin-nav');nav.hidden=true;for(const [v,n] of [['clients','Clientes'],['projects','Proyectos y configuración'],['editor','Actualizar avances'],['users','Usuarios e invitaciones'],['catalog','Catálogo de servicios'],['history','Historial']]){const b=E('button',n);b.type='button';b.dataset.tab=v;nav.append(b);}
-  const note=id('p','notice','notice');note.setAttribute('role','status');note.hidden=true;const content=id('div','content','content'),foot=E('footer');foot.append(E('span','UNARA · Piloto privado 3.5. Los cambios de muestra desaparecen al salir o recargar.'));
+  const note=id('p','notice','notice');note.setAttribute('role','status');note.hidden=true;const content=id('div','content','content'),foot=E('footer');foot.append(E('span','UNARA · Piloto privado 3.5.2. Los cambios de muestra desaparecen al salir o recargar.'));
   shell.append(head,demo,workspace,nav,note,content,foot);shadow.append(css,shell);if(!allowed()){clear();return;}
   startDemo(shadow,doc,allowed);if(!allowed()){clear();return;}host.hidden=false;
  }
