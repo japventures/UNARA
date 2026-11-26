@@ -114,3 +114,7 @@ footer{color:#657680;border-color:#b8c1c3}
 .calculated-number{font-family:"DM Serif Display",Georgia,serif;font-size:30px;line-height:1.1;color:#102832;font-variant-numeric:tabular-nums}
 .calculated-count{font-size:11px;font-weight:650;color:#53666d;line-height:1.25}
 .calculated-progress small{grid-column:1/-1;font-size:10px}
+
+/* Avance de tareas dentro del tramo previsto del Gantt. */
+.plan-bar{overflow:hidden;background:color-mix(in srgb,var(--company) 20%,#f4f1e9)}
+.plan-fill{display:block;position:absolute;top:0;bottom:0;left:0;background:var(--company);border-radius:1px 0 0 1px;max-width:100%}
